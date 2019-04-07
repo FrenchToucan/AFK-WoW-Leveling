@@ -15,7 +15,7 @@
     		ControlSend,, g, World of Warcraft
     		Sleep 500
 	}
-	Loop 30 ; 	//Press Auto button (tdbattlepetsscript required) Upped sleep to 2 seconds
+	Loop 35 ; 	//Press Auto button (tdbattlepetsscript required)
 	{
 		ControlSend,, a, World of Warcraft
     		Sleep 2000
