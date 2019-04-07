@@ -20,9 +20,9 @@
 		ControlSend,, a, World of Warcraft
     		Sleep 1500
 	}
-	Loop 1 ; 	//wait 180 seconds then Revive Battle Pets
+	Loop 1 ; 	//wait 190 seconds then Revive Battle Pets - 180 was too little until additional pets can be scripted in
 	{
-		Sleep 180000
+		Sleep 190000
 		ControlSend,, 8, World of Warcraft
     	}
 
