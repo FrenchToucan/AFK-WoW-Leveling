@@ -15,14 +15,14 @@
     		ControlSend,, g, World of Warcraft
     		Sleep 500
 	}
-	Loop 15 ; 	//Press Auto button (tdbattlepetsscript required)
+	Loop 30 ; 	//Press Auto button (tdbattlepetsscript required) Upped sleep to 2 seconds
 	{
 		ControlSend,, a, World of Warcraft
-    		Sleep 1500
+    		Sleep 2000
 	}
-	Loop 1 ; 	//wait 190 seconds then Revive Battle Pets - 180 was too little until additional pets can be scripted in
+	Loop 1 ; 	//wait 140 seconds then Revive Battle Pets
 	{
-		Sleep 190000
+		Sleep 140000
 		ControlSend,, 8, World of Warcraft
     	}
 
@@ -31,14 +31,33 @@
 
 /*
 tdBattlePetScript:
-ability(919) [!enemy.aura(918).exists]
-ability(921)
+if [self(#3).active]
+	ability(345)
+	ability(429)
+endif 
+if [self(#2).active]
+	ability(345)
+	ability(429)
+endif  
+if [self(#2).dead]
+	change(#3)  
+endif  
+if [self(#1).dead]
+	change(#2)  
+endif  
+if [self(#1).active]  
+	ability(919) [!enemy.aura(918).exists]
+	ability(921)
+endif
 
 Pets:
 Zandalari Anklerender 2 1 2
+Ashmaw Cub 1 1 1
+Ashmaw Cub 1 1 1
 
 Notes:
-Put a Zandalari Anklerender in slot 1. The rest don't matter because they wil not come in; this is only good for character experience (4389 exp).
+Put a Zandalari Anklerender in slot 1. If the Zandalari Anklerender ges knocked out, the Ashmaw Cubs are strong against the rats.
+4389 character experience.
 Character is not pushed back after battle. Approach code removed.
 Not gossip dialogue. Gossip code removed.
 */
