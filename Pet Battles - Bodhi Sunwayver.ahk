@@ -9,7 +9,7 @@
 	Loop 1 ;	//Approach target reduced sleep between down and up
 	{
     		ControlSend,, {w down}, World of Warcraft
-		sleep 1000
+		sleep 900
 		ControlSend,, {w up}, World of Warcraft
     		
 	}
@@ -28,7 +28,7 @@
 		ControlSend,, 0, World of Warcraft
     		Sleep 5000
 	}
-	Loop 32 ; 	//Press Auto button (tdbattlepetsscript required) upped sleep to 5 seconds
+	Loop 33 ; 	//Press Auto button (tdbattlepetsscript required) upped sleep to 5 seconds
 	{
 		ControlSend,, a, World of Warcraft
     		Sleep 7000
