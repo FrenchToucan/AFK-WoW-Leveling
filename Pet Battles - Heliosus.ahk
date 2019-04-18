@@ -35,9 +35,9 @@
 		ControlSend,, a, World of Warcraft
     		Sleep 1500
 	}
-	Loop 1 ; 	//wait 7:15 then Revive Battle Pets
+	Loop 1 ; 	//wait under 4 minutes then Revive Battle Pets
 	{
-		Sleep 435000
+		Sleep 280000
 		ControlSend,, 8, World of Warcraft
     	}
 
