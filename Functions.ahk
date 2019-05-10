@@ -43,7 +43,7 @@ interact()
 
 gossip()
 {
-	Loop 1 ;	//Select gossip option #1 (let's fight)
+	Loop 1 ;	//Select gossip option #1 (Let's Fight!)
 	{
 		ControlSend,, 0, World of Warcraft
 		Sleep 5000
@@ -61,7 +61,7 @@ auto_pet_fight(x,y)
 
 revive_pets(x)
 {
-Loop 1 ; 	//Revive Battle Pets after 30 seconds
+Loop 1 ; 	//Revive Battle Pets after x milliseconds
 	{
 		Sleep x
 		ControlSend,, 8, World of Warcraft

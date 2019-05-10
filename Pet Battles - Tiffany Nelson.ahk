@@ -3,13 +3,13 @@
 	Loop 1 ;	//Target Amalia (for a full pet clear)
 	{
 		ControlSend,, 5, World of Warcraft
-    		Sleep 5000
+    		Sleep 4000
 	}	
 
 	Loop 1 ;	//Approach target
 	{
     		ControlSend,, {w down}, World of Warcraft
-		sleep 1100
+		sleep 1000
 		ControlSend,, {w up}, World of Warcraft
     		
 	}
@@ -28,14 +28,14 @@
 		ControlSend,, 0, World of Warcraft
     		Sleep 5000
 	}
-	Loop 120 ; 	//Press Auto button (tdbattlepetsscript required)
+	Loop 60 ; 	//Press Auto button (tdbattlepetsscript required)
 	{
 		ControlSend,, a, World of Warcraft
-    		Sleep 1500
+    		Sleep 5000
 	}
 	Loop 1 ; 	//wait 5 minutes then Revive Battle Pets
 	{
-		Sleep 300000
+		Sleep 400000
 		ControlSend,, 8, World of Warcraft
     	}
 
