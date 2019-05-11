@@ -1,7 +1,5 @@
 ﻿Loop
 {
-	ControlSend,, 0, World of Warcraft
-    	Sleep 1000
-	ControlSend,, 0, World of Warcraft
-    	Sleep 16000
+	ControlSend,, 0, World of Warcraft //Use proper scrapping plugin and set it's macro to 0 hotkey
+    Sleep 1000
 }
