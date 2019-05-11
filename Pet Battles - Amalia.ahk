@@ -3,20 +3,20 @@
 	Loop 1 ;	//Target Sir Galveston (for a full pet clear)
 	{
 		ControlSend,, 9, World of Warcraft
-    		Sleep 3000
+    	Sleep 3000
 	}	
 
 	Loop 1 ;	//Approach Amalia
 	{
-    		ControlSend,, {w down}, World of Warcraft
-		sleep 900
+    	ControlSend,, {w down}, World of Warcraft
+		Sleep 900
 		ControlSend,, {w up}, World of Warcraft
     		
 	}
 	Loop 1 ;	//Target Amalia
 	{
 		ControlSend,, 5, World of Warcraft
-    		Sleep 4000
+    	Sleep 4000
 	}
 	Loop 1 ; 	//Interact with target
 	{
@@ -26,20 +26,18 @@
 	Loop 1 ;	//Select gossip option #1 (let's fight)
 	{
 		ControlSend,, 0, World of Warcraft
-    		Sleep 5000
+    	Sleep 5000
 	}
 	Loop 100 ; 	//Press Auto button (tdbattlepetsscript required)
 	{
 		ControlSend,, a, World of Warcraft
-    		Sleep 1500
+    	Sleep 1500
 	}
 	Loop 1 ; 	//wait x minutes then Revive Battle Pets
 	{
 		Sleep 90000
 		ControlSend,, 8, World of Warcraft
-    	}
-
-
+    }
 }
 
 /*

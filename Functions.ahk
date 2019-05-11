@@ -1,7 +1,7 @@
 ﻿#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 #Warn  ; Enable warnings to assist with detecting common errors.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
-
+// -----Pet Battle Functions-----
 reset_with_amalia()
 {
 	Loop 1 ;	//Target Amalia (for a full pet reset)
@@ -69,9 +69,19 @@ auto_pet_fight(x,y)
 
 revive_pets(x)
 {
-Loop 1 ; 	//Revive Battle Pets after x milliseconds
+	Loop 1 ; 	//Revive Battle Pets after x milliseconds
 	{
 		Sleep x
 		ControlSend,, 8, World of Warcraft
+	}
+}
+
+// -----Other Functions------
+repeat_with_parameters(x,y,z)
+{
+	Loop %x% ; //Can be used to repeat a single hotkey as many times as necessary with proper sleeptime
+	{
+		ControlSend,, %y%, World of Warcraft
+		Sleep %z%
 	}
 }
