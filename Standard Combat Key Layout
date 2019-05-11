@@ -1,0 +1,5 @@
+Standard Combat Key Layout
+1: GSE Single Target - Note: For AoE//Multi-Target set up via Logitech software. If a second hotkey is required (not a modifier), set to higher hotkey (like 8 or 9).
+2: Loot - Note: Loot-a-Rang is preferable. If not available, use macro /targetlast (??) + interact with target hotkey (need to figure out how to combine those into one for when I'm actually playing and not using AHK)
+3: Mount - Don't use Mammoth here due issues getting stuck
+STANDARDIZE AND ADD REMAINDER

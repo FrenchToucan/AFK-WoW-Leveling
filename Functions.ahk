@@ -2,12 +2,21 @@
 #Warn  ; Enable warnings to assist with detecting common errors.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 
-clear_with_amalia()
+reset_with_amalia()
 {
-	Loop 1 ;	//Target Amalia (for a full pet clear)
+	Loop 1 ;	//Target Amalia (for a full pet reset)
 	{
 		ControlSend,, 5, World of Warcraft
 		Sleep 3000
+	}	
+}
+
+reset_with_sir_galveston()
+{
+	Loop 1 ;	//Target Sir Galveston (for a full pet reset)
+	{
+		ControlSend,, 9, World of Warcraft
+    	Sleep 3000
 	}	
 }
 
@@ -24,11 +33,10 @@ approach()
 
 target(x)
 {
-	Loop 1 ;	//Target x - where is hotkey for targeting the desired opponent
+	Loop 1 ;	//Target x - where x is hotkey for targeting the desired opponent
 	{
 		ControlSend,, %x%, World of Warcraft
 		Sleep 1000
-		return
 	}
 }
 
@@ -46,13 +54,13 @@ gossip()
 	Loop 1 ;	//Select gossip option #1 (Let's Fight!)
 	{
 		ControlSend,, 0, World of Warcraft
-		Sleep 5000
+		Sleep 4000
 	}
 }
 
 auto_pet_fight(x,y)
 {
-	Loop %x% ; 	//Press Auto button (tdbattlepetsscript required)
+	Loop %x% ; 	//Press Auto button x number of times and rest for y between presses (tdbattlepetsscript required)
 	{
 		ControlSend,, a, World of Warcraft
 		Sleep %y%
