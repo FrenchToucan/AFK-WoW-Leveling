@@ -2,7 +2,7 @@
 
 Loop
 {
-	clear_with_amalia()
+	reset_with_amalia()
 	
 	approach()
 	
