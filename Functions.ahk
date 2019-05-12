@@ -1,7 +1,7 @@
 ﻿#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 #Warn  ; Enable warnings to assist with detecting common errors.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
-// -----Pet Battle Functions-----
+; -----Pet Battle Functions-----
 reset_with_amalia()
 {
 	Loop 1 ;	//Target Amalia (for a full pet reset)
@@ -76,7 +76,7 @@ revive_pets(sleeptime)
 	}
 }
 
-// -----Other Functions------
+; -----Other Functions------
 repeat_with_parameters(loops,key,sleeptime)
 {
 	Loop %loops% ; //Can be used to repeat a single hotkey as many times as necessary with proper sleeptime
