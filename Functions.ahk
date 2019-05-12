@@ -58,30 +58,30 @@ gossip()
 	}
 }
 
-auto_pet_fight(x,y)
+auto_pet_fight(loops,sleeptime)
 {
-	Loop %x% ; 	//Press Auto button x number of times and rest for y between presses (tdbattlepetsscript required)
+	Loop %loops% ; 	//Press Auto button x number of times and rest for y between presses (tdbattlepetsscript required)
 	{
 		ControlSend,, a, World of Warcraft
-		Sleep %y%
+		Sleep %sleeptime%
 	}
 }
 
-revive_pets(x)
+revive_pets(sleeptime)
 {
 	Loop 1 ; 	//Revive Battle Pets after x milliseconds
 	{
-		Sleep %x%
+		Sleep %sleeptime%
 		ControlSend,, 8, World of Warcraft
 	}
 }
 
 // -----Other Functions------
-repeat_with_parameters(x,y,z)
+repeat_with_parameters(loops,key,sleeptime)
 {
-	Loop %x% ; //Can be used to repeat a single hotkey as many times as necessary with proper sleeptime
+	Loop %loops% ; //Can be used to repeat a single hotkey as many times as necessary with proper sleeptime
 	{
-		ControlSend,, %y%, World of Warcraft
-		Sleep %z%
+		ControlSend,, %key%, World of Warcraft
+		Sleep %sleeptime%
 	}
 }
