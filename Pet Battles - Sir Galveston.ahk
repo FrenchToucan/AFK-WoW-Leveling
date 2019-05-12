@@ -8,7 +8,7 @@
 
 	Loop 1 ;	//Approach target
 	{
-    		ControlSend,, {w down}, World of Warcraft
+    	ControlSend,, {w down}, World of Warcraft
 		sleep 900
 		ControlSend,, {w up}, World of Warcraft
     		
@@ -16,29 +16,28 @@
 	Loop 1 ;	//Target Sir Galveston
 	{
 		ControlSend,, 9, World of Warcraft
-    		Sleep 1000
+    	Sleep 1000
 	}
 	Loop 1 ; 	//Interact with target
 	{
-    		ControlSend,, g, World of Warcraft
-    		Sleep 500
+    	ControlSend,, g, World of Warcraft
+    	Sleep 500
 	}
 	Loop 1 ;	//Select gossip option #1 (let's fight)
 	{
 		ControlSend,, 0, World of Warcraft
-    		Sleep 5000
+    	Sleep 5000
 	}
 	Loop 30 ; 	//Press Auto button (tdbattlepetsscript required)
 	{
 		ControlSend,, a, World of Warcraft
-    		Sleep 5000
+    	Sleep 5000
 	}
 	Loop 1 ; 	//wait 100 seconds then Revive Battle Pets
 	{
 		Sleep 100000
 		ControlSend,, 8, World of Warcraft
-    	}
-
+    }
 
 }
 

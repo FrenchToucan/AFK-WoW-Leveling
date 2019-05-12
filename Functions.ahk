@@ -25,7 +25,7 @@ approach()
 	Loop 1 ;	//Approach target
 	{
 		ControlSend,, {w down}, World of Warcraft
-		sleep 900
+		Sleep 900
 		ControlSend,, {w up}, World of Warcraft
   		
 	}
@@ -71,7 +71,7 @@ revive_pets(x)
 {
 	Loop 1 ; 	//Revive Battle Pets after x milliseconds
 	{
-		Sleep x
+		Sleep %x%
 		ControlSend,, 8, World of Warcraft
 	}
 }
