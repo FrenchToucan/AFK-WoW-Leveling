@@ -6,7 +6,7 @@ reset_with_amalia()
 {
 	Loop 1 ;	//Target Amalia (for a full pet reset)
 	{
-		ControlSend,, 5, World of Warcraft
+		ControlSend,, 2, World of Warcraft
 		Sleep 3000
 	}	
 }
@@ -15,7 +15,7 @@ reset_with_sir_galveston()
 {
 	Loop 1 ;	//Target Sir Galveston (for a full pet reset)
 	{
-		ControlSend,, 9, World of Warcraft
+		ControlSend,, 3, World of Warcraft
     	Sleep 3000
 	}	
 }
@@ -72,7 +72,7 @@ revive_pets(sleeptime)
 	Loop 1 ; 	//Revive Battle Pets after x milliseconds
 	{
 		Sleep %sleeptime%
-		ControlSend,, 8, World of Warcraft
+		ControlSend,, 9, World of Warcraft
 	}
 }
 
