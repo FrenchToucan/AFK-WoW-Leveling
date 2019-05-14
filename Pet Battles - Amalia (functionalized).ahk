@@ -6,7 +6,7 @@ Loop
 	
 	approach()
 	
-	target(5)
+	target(2)
 	
 	interact()
 	
