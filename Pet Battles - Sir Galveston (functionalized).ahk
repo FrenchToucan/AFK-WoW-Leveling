@@ -6,7 +6,7 @@ Loop
 	
 	approach()
 	
-	target(9)
+	target(3)
 	
 	interact()
 	
@@ -14,10 +14,12 @@ Loop
 	
 	auto_pet_fight(30,5000)
 	
-	revive_pets(90000)
+	revive_pets(100000)
 }
 
 /*
+Add pet and ability info
+
 change(#2) [self(#3).active]
 if [enemy(#1).active]
 use(Fluch der Verdammnis:218)
