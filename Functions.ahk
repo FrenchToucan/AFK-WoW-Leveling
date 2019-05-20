@@ -85,3 +85,18 @@ repeat_with_parameters(loops,key,sleeptime)
 		Sleep %sleeptime%
 	}
 }
+
+exit_time_header
+{
+	exitTime = 10:59 am
+	setTimer, watchTime, 100
+	return
+}
+
+exit_time_footer
+{
+	watchTime:
+  	formatTime, curTime, a_now, h:mm tt
+  	if ( curTime = exitTime )
+    	ExitApp
+}
