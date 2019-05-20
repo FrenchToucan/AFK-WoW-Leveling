@@ -10,7 +10,7 @@ return
 Loop
 {
 
-	Stand_Close_Message
+	Stand_Close_Message()
 
 	reset_with_amalia()
 	
