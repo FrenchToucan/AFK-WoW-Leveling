@@ -76,9 +76,9 @@ revive_pets(sleeptime)
 	}
 }
 
-Stand_Close_Message
+Stand_Close_Message()
 {
-	MsgBox, [ Options, Stand Close!, Position character close to opponent. The character will not be thrown back after the battle., 10000]
+	MsgBox Position character close to opponent. The character will not be thrown back after the battle.
 	Sleep 10000
 }
 
