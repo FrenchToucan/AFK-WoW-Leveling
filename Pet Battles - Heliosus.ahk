@@ -1,50 +1,33 @@
-﻿Loop
+﻿#Include Functions.ahk
+
+LCtrl & Esc::
+	ExitApp
+	return
+Esc & LCtrl::
+ExitApp
+return
+
+Loop
 {
-	Loop 1 ;	//Target Amalia (for a full pet clear) - make sure macro is set
-	{
-		ControlSend,, 5, World of Warcraft
-    		Sleep 5000
-	}	
 
-	/* No knockback after battle completed
-	Loop 1 ;	//Approach target
-	{
-    		ControlSend,, {w down}, World of Warcraft
-		sleep 1100
-		ControlSend,, {w up}, World of Warcraft
-    		
-	}
-	*/
-	Loop 1 ;	//Target Sir Heliosus - make sure macro is set
-	{
-		ControlSend,, 7, World of Warcraft
-    		Sleep 1000
-	}
-	Loop 1 ; 	//Interact with target
-	{
-    		ControlSend,, g, World of Warcraft
-    		Sleep 500
-	}
-	Loop 1 ;	//Select gossip option #1 (let's fight)
-	{
-		ControlSend,, 0, World of Warcraft
-    		Sleep 5000
-	}
-	Loop 60 ; 	//Press Auto button (tdbattlepetsscript required)
-	{
-		ControlSend,, a, World of Warcraft
-    		Sleep 1500
-	}
-	Loop 1 ; 	//wait under 4 minutes then Revive Battle Pets
-	{
-		Sleep 280000
-		ControlSend,, 8, World of Warcraft
-    	}
+	Stand_Close_Message
 
-
+	reset_with_amalia()
+	
+	target(8)
+	
+	interact()
+	
+	gossip()
+	
+	auto_pet_fight(40,5000)
+	
+	revive_pets(280000)
 }
 
 /*
+Add pet and ability info
+
 use(Black Claw:919) [!enemy.aura(Black Claw:918).exists]
 use(Hunting Party:921)
 use(Leap:364)
