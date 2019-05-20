@@ -1,5 +1,5 @@
-﻿Gui, Add, Text,, Select a pet battle opponent.`nTo cancel, press ESCAPE or close this window.
-Gui, Add, ListBox, vMyListBox gMyListBox w400 r10
+﻿Gui, Add, Text,, Select a pet battle opponent.`nTo cancel, press Esc or close this window. To exit the script, press Left Ctl + Esc.
+Gui, Add, ListBox, vMyListBox gMyListBox w300 r5
 Gui, Add, Button, Default, OK
 Loop, Pre-External_Function_Scripts/*.*  ; Change this folder and wildcard pattern to suit your preferences.
 {

@@ -1,5 +1,12 @@
 ﻿#Include Functions.ahk
 
+LCtrl & Esc::
+	ExitApp
+	return
+Esc & LCtrl::
+ExitApp
+return
+
 Loop
 {
 	reset_with_amalia()

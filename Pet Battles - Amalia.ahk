@@ -1,9 +1,14 @@
 ﻿#Include Functions.ahk
 
+LCtrl & Esc::
+	ExitApp
+	return
+Esc & LCtrl::
+ExitApp
+return
+
 Loop
 {
-	exit_time_header
-
 	reset_with_sir_galveston()
 	
 	approach()
@@ -17,8 +22,6 @@ Loop
 	auto_pet_fight(100,1500)
 	
 	revive_pets(90000)
-
-	exit_time_footer
 }
 
 /*
