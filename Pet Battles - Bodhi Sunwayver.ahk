@@ -1,15 +1,8 @@
 ﻿#Include Functions.ahk
 
-LCtrl & Esc::
-	ExitApp
-	return
-Esc & LCtrl::
-ExitApp
-return
-
 Loop
 {
-	reset_with_amalia()
+	reset_with_sir_galveston()
 	
 	approach()
 	
@@ -23,7 +16,7 @@ Loop
 	
 	revive_pets(30000)
 }
-
+/*
 Teroclaw Hatching 21*
 Anubisath Idol 11*
 Level 3+
