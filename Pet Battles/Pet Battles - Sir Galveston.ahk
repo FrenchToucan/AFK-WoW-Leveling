@@ -1,12 +1,5 @@
 ﻿#Include Functions.ahk
 
-LCtrl & Esc::
-	ExitApp
-	return
-Esc & LCtrl::
-ExitApp
-return
-
 Loop
 {
 	reset_with_amalia()
@@ -25,7 +18,9 @@ Loop
 }
 
 /*
-Add pet and ability info
+Court Scribe 122
+Barnaby 112
+Leveling Pet (any level)
 
 change(#2) [self(#3).active]
 if [enemy(#1).active]
@@ -48,4 +43,12 @@ ability(Roar of the Dead:2071) [enemy(#3).active]
 ability(Tornado Punch:1052) [enemy(#3).active]
 change(#3) [!self(#3).played]
 use(#1)
+
+or (maybe?)
+
+change(#2) [ self(#3).active ]
+use(#2) [ !enemy(#1).active ]
+use(#3)
+use(#1)
+change(#3)
 */
