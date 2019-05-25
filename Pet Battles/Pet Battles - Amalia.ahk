@@ -1,11 +1,4 @@
-﻿#Include Functions.ahk
-
-LCtrl & Esc::
-	ExitApp
-	return
-Esc & LCtrl::
-ExitApp
-return
+#Include Functions.ahk
 
 Loop
 {

@@ -1,48 +1,16 @@
-﻿Loop
+﻿#Include Functions.ahk
+
+Loop
 {
-	Loop 1 ;	//Target Amalia (for a full pet clear)
-	{
-		ControlSend,, 5, World of Warcraft
-    		Sleep 5000
-	}	
-	/*
-	Loop 1 ;	//Approach target
-	{
-    		ControlSend,, {w down}, World of Warcraft
-		sleep 1100
-		ControlSend,, {w up}, World of Warcraft
-    		
-	}
-	*/
-	Loop 1 ;	//Target Stitches Jr Jr
-	{
-		ControlSend,, 2, World of Warcraft
-    		Sleep 1000
-	}
-	Loop 1 ; 	//Interact with target
-	{
-    		ControlSend,, g, World of Warcraft
-    		Sleep 500
-	}
-	/*
-	Loop 1 ;	//Select gossip option #1 (let's fight)
-	{
-		ControlSend,, 0, World of Warcraft
-    		Sleep 5000
-	}
-	*/
-	Loop 30 ; 	//Press Auto button (tdbattlepetsscript required)
-	{
-		ControlSend,, a, World of Warcraft
-    		Sleep 5000
-	}
-	Loop 1 ; 	//wait 100 seconds then Revive Battle Pets
-	{
-		Sleep 100000
-		ControlSend,, 8, World of Warcraft
-    	}
-
-
+	reset_with_amalia()
+	
+	target(7)
+	
+	interact()
+	
+	auto_pet_fight(30,5000)
+	
+	revive_pets(100000)
 }
 
 /*
