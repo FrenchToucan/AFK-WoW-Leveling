@@ -1,10 +1,9 @@
 ﻿#Include Functions.ahk
 
+Stand_Close_Message()
+
 Loop
 {
-
-	Stand_Close_Message()
-
 	reset_with_amalia()
 	
 	target(8)
@@ -19,14 +18,11 @@ Loop
 }
 
 /*
-Add pet and ability info
+Unborn Val'kyr 221
+Ikky 111
+Any (no leveling)
 
-use(Black Claw:919) [!enemy.aura(Black Claw:918).exists]
-use(Hunting Party:921)
-use(Leap:364)
-change(#2) [enemy.aura(Mysterious Egg:1593).exists]
-change(#3)
-use(Black Claw:919) [!enemy.aura(Black Claw:918).exists]
-use(Hunting Party:921)
-use(Leap:364)
+ability(#2) [ !enemy.aura(Black Claw).exists ]
+ability(#3)
+change(#2)
 */
