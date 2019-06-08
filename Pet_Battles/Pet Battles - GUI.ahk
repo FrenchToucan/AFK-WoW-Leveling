@@ -1,9 +1,9 @@
 ﻿Gui, Add, Text,, Select a pet battle opponent.`nTo cancel, press Esc or close this window. To exit the script, press Left Ctl + Esc.
 Gui, Add, ListBox, vMyListBox gMyListBox w300 r5
 Gui, Add, Button, Default, OK
-Loop, Pet_Battles/*.*  ; Change this folder and wildcard pattern to suit your preferences.
+Loop, *.*  ; Change this folder and wildcard pattern to suit your preferences.
 {
-    GuiControl,, MyListBox, %A_LoopFileFullPath%
+    GuiControl,, MyListBox, %A_LoopFilePath%
 }
 Gui, Show
 return
