@@ -1,2 +1,0 @@
-looting without a mouse;
-/targetlasttarget (as a macro) followed by interact with target key (typically G)
