@@ -18,7 +18,9 @@ Loop
 }
 
 /*
-add pet and ability info
+Emerald Proto-Whelp 222
+Any 12+
+Darkmoon Tonk 112
 
 change(#2) [self(#1).dead & !self(#2).played]
 change(#3) [self(#2).active]

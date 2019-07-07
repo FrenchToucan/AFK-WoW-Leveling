@@ -25,8 +25,9 @@ approach()
 	Loop 1 ;	Approach target
 	{
 		ControlSend,, {w down}, World of Warcraft
-		Sleep 900
+		Sleep 700
 		ControlSend,, {w up}, World of Warcraft
+		Sleep 1500
   		
 	}
 }
