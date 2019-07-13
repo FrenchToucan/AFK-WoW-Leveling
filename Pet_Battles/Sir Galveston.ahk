@@ -18,10 +18,14 @@ Loop
 }
 
 /*
-Court Scribe 122
-Barnaby 112
+Pets
+---------------------
+Court Scribe 1 2 2
+Barnaby 1 1 2
 Leveling Pet (any level)
 
+tdBattlePetScript
+---------------------
 change(#2) [self(#3).active]
 if [enemy(#1).active]
 use(Fluch der Verdammnis:218)

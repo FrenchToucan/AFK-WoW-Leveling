@@ -23,6 +23,12 @@ Loop
 }
 
 /*
+Pets
+---------------------
+Zandalari Anklerender 2 1 2
+Ashmaw Cub 1 1 1
+Ashmaw Cub 1 1 1
+
 tdBattlePetScript
 ---------------------
 if [self(#3).active]
@@ -43,12 +49,6 @@ if [self(#1).active]
 	ability(919) [!enemy.aura(918).exists]
 	ability(921)
 endif
-
-Pets
----------------------
-Zandalari Anklerender 2 1 2
-Ashmaw Cub 1 1 1
-Ashmaw Cub 1 1 1
 
 Notes
 ---------------------

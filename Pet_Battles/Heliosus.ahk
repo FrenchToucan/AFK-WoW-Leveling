@@ -18,10 +18,14 @@ Loop
 }
 
 /*
-Unborn Val'kyr 221
-Ikky 111
-Any (no leveling)
+Pets
+---------------------
+Unborn Val'kyr 2 2 1
+Ikky 1 1 1
+Any Pet (no leveling - Will never come into play)
 
+tdBattlePetScript
+---------------------
 ability(#2) [ !enemy.aura(Black Claw).exists ]
 ability(#3)
 change(#2)
