@@ -18,10 +18,14 @@ Loop
 }
 
 /*
-Emerald Proto-Whelp 222
-Any 12+
-Darkmoon Tonk 112
+Pets
+---------------------
+Emerald Proto-Whelp 2 2 2
+Level Pet 12+
+Darkmoon Tonk 1 1 2
 
+tdBattlePetScript
+---------------------
 change(#2) [self(#1).dead & !self(#2).played]
 change(#3) [self(#2).active]
 if [enemy(#3).active & self(#1).active]

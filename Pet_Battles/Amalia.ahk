@@ -18,8 +18,12 @@ Loop
 }
 
 /*
-List pets and abilities.
+Pets
+---------------------
 
+
+tdBattlePetScript
+---------------------
 standby [ self(#2).active & enemy.ability(#3).duration=6 ]
 change(#3) [ self(#2).played ]
 standby [ enemy.aura(1358).exists ]
