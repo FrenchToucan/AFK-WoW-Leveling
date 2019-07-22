@@ -17,10 +17,14 @@ Loop
 	revive_pets(30000)
 }
 /*
-Teroclaw Hatching 21*
-Anubisath Idol 11*
-Level 3+
+Pets
+---------------------
+Teroclaw Hatching 2 1 *
+Anubisath Idol 1 1 *
+Level Pet 3+
 
+tdBattlePetScript
+---------------------
 change(#2) [ self(#3).played ]
 change(#3) [ enemy(#2).dead & ! self(#3).played ]
 change(#2) [ enemy(#2).active ]
