@@ -4,7 +4,7 @@ Loop
 {
 	reset_with_trixy()
 	
-	approach()
+	approach_xorvasc()
 	
 	target(3)
 	
@@ -12,9 +12,9 @@ Loop
 	
 	gossip()
 	
-	auto_pet_fight(60,5000)
+	auto_pet_fight(50,7000)
 	
-	revive_pets(300000)
+	revive_pets(240000)
 }
 
 /*
