@@ -20,6 +20,15 @@ reset_with_sir_galveston()
 	}	
 }
 
+reset_with_trixy()
+{
+	Loop 1 ;	Target Trixy (for a full pet reset when fighting Xorvasc)
+	{
+		ControlSend,, 2, World of Warcraft
+    	Sleep 3000
+	}	
+}
+
 approach()
 {
 	Loop 1 ;	Approach target
