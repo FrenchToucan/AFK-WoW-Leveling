@@ -46,7 +46,7 @@ approach_xorvasc()
 	Loop 1 ;	Approach Xorvasc - requires slightly longer approach than others
 	{
 		ControlSend,, {w down}, World of Warcraft
-		Sleep 800
+		Sleep 850
 		ControlSend,, {w up}, World of Warcraft
 		Sleep 1500
   		
