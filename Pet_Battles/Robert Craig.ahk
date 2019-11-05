@@ -2,7 +2,7 @@
 
 Loop
 {
-	reset_with_fargo()
+	reset_with_baeloth()
 	
 	approach()
 	
@@ -30,11 +30,25 @@ standby [self.aura(Crystal Prison:734).exists]
 ability(Toxic Smoke:640) [round=1]
 ability(Wind-Up:459) [round=2]
 ability(Wind-Up:459) [round=3]
+ability(Toxic Smoke:640) [round=4]
+ability(Launch Rocket:293)
+ability(Launch Rocket:293)
+ability(Call Blizzard:206)
+ability(Gift of Winter's Veil:586)
+ability(#1)
+change(next)
+
+
+
+standby [self.aura(Crystal Prison:734).exists]
+ability(Toxic Smoke:640) [round=1]
+ability(Wind-Up:459) [round=2]
+ability(Wind-Up:459) [round=3]
 ability(Call Blizzard:206)
 ability(Ice Tomb:624)
 ability(Bubble:934)
 ability(Frost Shock:416) [self.speed.slow]
 ability(Gift of Winter's Veil:586)
-ability(#1)
+ability(#2)
 change(next)
 */

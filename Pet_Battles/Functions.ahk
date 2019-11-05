@@ -29,9 +29,9 @@ reset_with_trixy()
 	}	
 }
 
-reset_with_fargo()
+reset_with_baeloth()
 {
-	Loop 1 ;	Target Fargo Flintlocke (for a full pet reset when fighting Robert Craig)
+	Loop 1 ;	Target Baeloth (for a full pet reset when fighting Robert Craig)
 	{
 		ControlSend,, 5, World of Warcraft
     	Sleep 3000
