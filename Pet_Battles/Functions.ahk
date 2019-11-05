@@ -29,6 +29,15 @@ reset_with_trixy()
 	}	
 }
 
+reset_with_fargo()
+{
+	Loop 1 ;	Target Fargo Flintlocke (for a full pet reset when fighting Robert Craig)
+	{
+		ControlSend,, 5, World of Warcraft
+    	Sleep 3000
+	}	
+}
+
 approach()
 {
 	Loop 1 ;	Approach target
