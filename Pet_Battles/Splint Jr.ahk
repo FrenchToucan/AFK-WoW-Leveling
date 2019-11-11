@@ -1,12 +1,5 @@
 ﻿#Include Functions.ahk
 
-LCtrl & Esc::
-	ExitApp
-	return
-Esc & LCtrl::
-ExitApp
-return
-
 Loop
 {
 	reset_with_amalia()
@@ -19,7 +12,7 @@ Loop
 	
 	auto_pet_fight(35,4000)
 	
-	revive_pets(140000)
+	revive_pets(60000)
 }
 
 /*

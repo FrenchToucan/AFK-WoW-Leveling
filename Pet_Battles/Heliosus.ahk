@@ -14,7 +14,7 @@ Loop
 	
 	auto_pet_fight(40,5000)
 	
-	revive_pets(280000)
+	revive_pets(120000)
 }
 
 /*
@@ -23,6 +23,8 @@ Pets
 Unborn Val'kyr 2 2 1
 Ikky 1 1 1
 Any Pet (no leveling - Will never come into play)
+
+This doesn't match with ped script below. Relaly do this with all Zandalaris and a longer script. Check Xu.
 
 tdBattlePetScript
 ---------------------
