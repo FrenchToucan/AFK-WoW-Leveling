@@ -30,5 +30,19 @@ tdBattlePetScript
 ---------------------
 ability(#2) [ !enemy.aura(Black Claw).exists ]
 ability(#3)
-change(#2)
+change(#2) [ enemy(#1).dead & ! self(#3).dead ]
+ability(#1)
+
+
+
+
+use(Black Claw:919) [!enemy.aura(Black Claw:918).exists]
+use(Hunting Party:921)
+use(Leap:364)
+change(#3)
+use(Black Claw:919) [!enemy.aura(Black Claw:918).exists]
+use(Hunting Party:921)
+use(Leap:364)
+change(#2) [ enemy(#1).dead & ! self(#3).dead ]
+ability(#1)
 */
