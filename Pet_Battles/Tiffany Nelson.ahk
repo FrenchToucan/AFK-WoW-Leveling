@@ -12,9 +12,9 @@ Loop
 	
 	gossip()
 	
-	auto_pet_fight(60,7000)
+	auto_pet_fight(45,7000)
 	
-	revive_pets(400000)
+	revive_pets(120000)
 }
 
 /*
@@ -45,7 +45,8 @@ endif
 ability(Emerald Dream:598) [self(#1).hp < 900 & !enemy(#3).active]
 ability(Emerald Presence:597) [self(#1).aura(Emerald Presence:823).duration <=1 & !enemy(#3).active]
 ability(Emerald Bite:525)
-ability(Ion Cannon:209) [enemy(#3).hp > 659 & enemy.hp <1098]
+change(#3) [ enemy(#1).dead ]
+ability(Ion Cannon:209)
 ability(Shock and Awe:646)
 ability(Missile:777)
 */

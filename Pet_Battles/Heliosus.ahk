@@ -20,22 +20,14 @@ Loop
 /*
 Pets
 ---------------------
-Unborn Val'kyr 2 2 1
-Ikky 1 1 1
-Any Pet (no leveling - Will never come into play)
+Zandalari Anklerenderer 2 1 2
+Albino River Calf 2 1 1
+Zandalari Kneebiter 2 2 1
 
 This doesn't match with ped script below. Relaly do this with all Zandalaris and a longer script. Check Xu.
 
 tdBattlePetScript
 ---------------------
-ability(#2) [ !enemy.aura(Black Claw).exists ]
-ability(#3)
-change(#2) [ enemy(#1).dead & ! self(#3).dead ]
-ability(#1)
-
-
-
-
 use(Black Claw:919) [!enemy.aura(Black Claw:918).exists]
 use(Hunting Party:921)
 use(Leap:364)
