@@ -38,6 +38,18 @@ reset_with_baeloth()
 	}	
 }
 
+approachPlus()
+{
+	Loop 1 ;	Approach target
+	{
+		ControlSend,, {w down}, World of Warcraft
+		Sleep 900
+		ControlSend,, {w up}, World of Warcraft
+		Sleep 1500
+  		
+	}
+}
+
 approach()
 {
 	Loop 1 ;	Approach target
