@@ -14,7 +14,7 @@ Loop
 	
 	auto_pet_fight(100,1500)
 	
-	revive_pets(120000)
+	revive_pets(90000)
 }
 
 /*
@@ -34,6 +34,19 @@ ability(566) [ enemy(#2).active & enemy.round!=1 ]
 ability(566) [ enemy(#3).active & !self.aura(458).exists ]
 ability(459)
 change(#2) [ !self(#2).played ]
+ability(#3) [ enemy.ability(#2).usable ]
+ability(#2) [ enemy.aura(927).exists ]
+ability(#1)
+
+Removes switch put other pet gets dragged in anyways and then has to be switched out. 6c
+change(#3) [ self(#1).dead ]
+standby [ enemy.aura(1358).exists ]
+ability(208) [ self.aura(1725).exists ]
+ability(208) [ enemy(#2).active & enemy.hp>864 & round=8 ]
+ability(459) [ enemy.hp>243 & round=9 ]
+ability(566) [ enemy(#2).active & enemy.round!=1 ]
+ability(566) [ enemy(#3).active & !self.aura(458).exists ]
+ability(459)
 ability(#3) [ enemy.ability(#2).usable ]
 ability(#2) [ enemy.aura(927).exists ]
 ability(#1)
