@@ -38,6 +38,15 @@ reset_with_baeloth()
 	}	
 }
 
+reset_with_egcellent()
+{
+	Loop 1 ;	Target Egcellent (for a full pet reset when fighting Grixis Tinypop)
+	{
+		ControlSend,, 6, World of Warcraft
+    	Sleep 3000
+	}	
+}
+
 approachPlus()
 {
 	Loop 1 ;	Approach target
