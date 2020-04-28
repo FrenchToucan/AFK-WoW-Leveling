@@ -8,8 +8,6 @@ Loop
 	
 	interact()
 	
-	gossip()
-	
 	auto_pet_fight(35,4000)
 	
 	revive_pets(60000)
@@ -49,5 +47,5 @@ Put a Zandalari Anklerender in slot 1. If the Zandalari Anklerender ges knocked 
 No room for level pet with this arrangement.
 42xx character experience per battle.
 Character is not pushed back after battle. Approach code removed.
-Not gossip dialogue. Gossip code removed.
+No gossip dialogue. Gossip code removed.
 */
