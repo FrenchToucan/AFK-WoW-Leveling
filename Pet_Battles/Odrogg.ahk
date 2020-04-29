@@ -2,7 +2,7 @@
 
 Loop
 {
-	target(4)
+	target(8)
 
 	approachPlus()
 	
@@ -20,26 +20,26 @@ Loop
 /*
 Pets
 ---------------------
-Zandalari Anklerenderer 2 1 2
-Albino River Calf 2 1 1
-Zandalari Kneebiter 2 2 1
-
-This doesn't match with ped script below. Relaly do this with all Zandalaris and a longer script. Check Xu.
+Teroclaw Hatchling 1 1 2
+Leveling Pet (any level)
+Leveling Pet (any level)
 
 tdBattlePetScript
 ---------------------
-if [!enemy.ability(Stone Form:1466).usable]
-change(#2) [!self(#2).played & self(#2).level<25]
-change(#3) [!self(#3).played & self(#3).level<25]
-endif
-change(#1) [!self(#1).active]
-use(Ravage:802) [round=1]
-use(Dodge:312) [enemy(#1).active & enemy.round=6]
-use(Dodge:312) [enemy(#2).active & enemy.round=2]
-use(Dodge:312) [enemy(#3).active & enemy.round=3]
-use(Ravage:802) [enemy(#1).active & enemy(#1).hp<926]
-use(Ravage:802) [enemy(#2).active & enemy(#2).hp<520]
-use(Ravage:802) [enemy(#3).active & enemy(#3).hp<926]
-use(Claw:429) 
-standby [self.aura(927).exists]
+use(Ravage:802) [ round=1 ]
+change(#2) [ round=3 ]
+change(#3) [ round=4 ]
+change(#1) [ round=5 ]
+use(Dodge:312) [ round=6 ]
+use(Dodge:312) [ enemy.aura(Underwater:830).exists ]
+standby [ enemy(#2).active & enemy.round<3 & enemy.aura(Shell Shield:309).exists & self.aura(Dodge:311).exists ]
+use(Ravage:802) [ enemy.hp<521 & enemy(#2).active & enemy.round<6 ]
+use(Ravage:802) [ enemy.hp<382 & enemy.aura(Shell Shield:309).exists ]
+use(Ravage:802) [ enemy.hp<463 & !enemy.aura(Shell Shield:309).exists & enemy(#2).active ]
+use(Dodge:312) [ enemy.ability(Headbutt:376).usable & enemy.aura(Shell Shield:309).exists ]
+use(Ravage:802) [ !enemy.ability(Dive:564).usable & enemy.hp<926 ]
+use(Ravage:802) [ !enemy.aura(Underwater:830).exists & enemy.hp<926 & !enemy(#2).active ]
+use(Claw:429)
+standby [ self.aura(Stunned:927).exists ]
+quit [ self(#1).dead ]
 */
