@@ -43,7 +43,7 @@ endif
 
 Notes
 ---------------------
-Put a Zandalari Anklerender in slot 1. If the Zandalari Anklerender ges knocked out, the Ashmaw Cubs are strong against the rats.
+Put a Zandalari Anklerender in slot 1. If the Zandalari Anklerender ges knocked out, the Ashmaw Cubs are strong against the rats. Short rest between battles means Anklerenders may start battles with partial HP. Not an issue, Cubs can pick up the slack.
 No room for level pet with this arrangement.
 42xx character experience per battle.
 Character is not pushed back after battle. Approach code removed.
