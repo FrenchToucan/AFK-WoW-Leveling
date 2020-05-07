@@ -21,7 +21,7 @@ Pets
 ---------------------
 Teroclaw Hatching 2 1 *
 Anubisath Idol 1 1 *
-Level Pet 3+
+Level Pet (any level)
 
 tdBattlePetScript
 ---------------------

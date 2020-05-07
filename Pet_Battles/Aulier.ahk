@@ -12,7 +12,7 @@ Loop
 	
 	gossip()
 	
-	auto_pet_fight(17,7000)
+	auto_pet_fight(25,7000)
 	
 	revive_pets(70000)
 }
@@ -20,13 +20,12 @@ Loop
 /*
 Pets
 ---------------------
-Mechanical Axebeak
+Mechanical Axebeak 1 1 1
 Level Pet (any level)
-Nether Faerie Dragon 221
+Nether Faerie Dragon 2 2 1
 
 tdBattlePetScript
 ---------------------
-quit [ self(#2).dead ] 
 quit [self(#3).dead & round < 12] 
 if [ self(#1).active ] 
 ability(#3) 
