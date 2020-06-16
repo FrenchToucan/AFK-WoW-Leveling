@@ -14,14 +14,14 @@ Loop
 	
 	auto_pet_fight(25,7000)
 	
-	revive_pets(70000)
+	revive_pets(60000)
 }
 
 /*
 Pets
 ---------------------
 Mechanical Axebeak 1 1 1
-Level Pet (any level)
+Albino River Calf X 1 1
 Nether Faerie Dragon 2 2 1
 
 tdBattlePetScript
@@ -45,4 +45,10 @@ change(#1) [ self(#3).dead & enemy(#2).active ]
 change(#2) [ enemy(#2).active & enemy.hp < 400 ]
 ability(#1)
 endif
+if [ self(#3).dead ]
+change(#2)
+ability(#3)
+ability(#2)
+endif
+ability(#1)
 */
