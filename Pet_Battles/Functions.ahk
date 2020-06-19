@@ -2,6 +2,14 @@
 #Warn  ; Enable warnings to assist with detecting common errors.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 ; -----Pet Battle Functions-----
+challenge_pole_interact()
+{
+	CoordMode, Mouse, Screen
+	MouseMove, (A_ScreenWidth // 2), (A_ScreenHeight // 2)
+	ControlClick,, World of Warcraft,, RIGHT
+	sleep 500
+}
+
 reset_with_amalia()
 {
 	Loop 1 ;	Target Amalia (for a full pet reset)
