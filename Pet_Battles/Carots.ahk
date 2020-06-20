@@ -4,17 +4,15 @@ Loop
 {
 	target(6)
 
-	sleep 500
-
 	ApproachPlus()
 
 	target(8)
 	
 	challenge_pole_interact()
 	
-	auto_pet_fight(28,5000)
+	auto_pet_fight(30,5000)
 	
-	revive_pets(100000)
+	revive_pets(90000)
 }
 
 /*
