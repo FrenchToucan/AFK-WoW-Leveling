@@ -1,8 +1,8 @@
 # AHK-Scripts
-Uses Autohotkey to automatically level WoW Retail characters.
+Uses AutoHotkey to automatically level WoW Retail characters.
 
 Requirements:
-Autohotkey
+AutoHotkey
 tdpetbattle add-on
 Access to new Dalaran (Legion)
 
