@@ -1,6 +1,11 @@
 ﻿#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 #Warn  ; Enable warnings to assist with detecting common errors.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
+
+^!p::Pause ; Ctrl + Alt + p
+^!e::ExitApp ; Ctrl + Alt + e
+^!r::Reload ; Ctrl + Alt + r
+
 ; -----Pet Battle Functions-----
 challenge_pole_interact()
 {
@@ -16,7 +21,7 @@ reset_with_amalia()
 	{
 		ControlSend,, 2, World of Warcraft
 		Sleep 3000
-	}	
+	}
 }
 
 reset_with_sir_galveston()
@@ -25,7 +30,7 @@ reset_with_sir_galveston()
 	{
 		ControlSend,, 3, World of Warcraft
     	Sleep 3000
-	}	
+	}
 }
 
 reset_with_trixy()
@@ -34,7 +39,7 @@ reset_with_trixy()
 	{
 		ControlSend,, 2, World of Warcraft
     	Sleep 3000
-	}	
+	}
 }
 
 reset_with_baeloth()
@@ -43,7 +48,7 @@ reset_with_baeloth()
 	{
 		ControlSend,, 5, World of Warcraft
     	Sleep 3000
-	}	
+	}
 }
 
 reset_with_egcellent()
@@ -52,7 +57,7 @@ reset_with_egcellent()
 	{
 		ControlSend,, 6, World of Warcraft
     	Sleep 3000
-	}	
+	}
 }
 
 approachPlus()
@@ -63,7 +68,7 @@ approachPlus()
 		Sleep 900
 		ControlSend,, {w up}, World of Warcraft
 		Sleep 1500
-  		
+
 	}
 }
 
@@ -75,7 +80,7 @@ approach()
 		Sleep 700
 		ControlSend,, {w up}, World of Warcraft
 		Sleep 1500
-  		
+
 	}
 }
 
@@ -87,7 +92,7 @@ approach_xorvasc()
 		Sleep 850
 		ControlSend,, {w up}, World of Warcraft
 		Sleep 1500
-  		
+
 	}
 
 
@@ -138,13 +143,21 @@ revive_pets(sleeptime)
 	}
 }
 
-Stand_Close_Message() ; Doesn't  work
+Stand_Close_Message() ; Doesn't  work - CHECK ON THIS, I THINK IT DOES WORK
 {
 	MsgBox Position character close to opponent. The character will not be thrown back after the battle.
 	Sleep 10000
 }
 
 ; -----Other Functions------
+hotkeys() ; add Pause, Exit and Reload hotkeys to each script
+{
+^!p::Pause ; Ctrl + Alt + p
+^!e::ExitApp ; Ctrl + Alt + e
+^!r::Reload ; Ctrl + Alt + r
+}
+
+
 repeat_with_parameters(loops,key,sleeptime)
 {
 	Loop %loops% ; //Can be used to repeat a single hotkey as many times as necessary with proper sleeptime
