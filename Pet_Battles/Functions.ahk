@@ -2,9 +2,9 @@
 #Warn  ; Enable warnings to assist with detecting common errors.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 
-^!p::Pause ; Ctrl + Alt + p
-^!e::ExitApp ; Ctrl + Alt + e
-^!r::Reload ; Ctrl + Alt + r
+;^!p::Pause ; Ctrl + Alt + p
+;^!e::ExitApp ; Ctrl + Alt + e
+;^!r::Reload ; Ctrl + Alt + r
 
 ; -----Pet Battle Functions-----
 challenge_pole_interact()
@@ -143,26 +143,19 @@ revive_pets(sleeptime)
 	}
 }
 
-Stand_Close_Message() ; Doesn't  work - CHECK ON THIS, I THINK IT DOES WORK
-{
-	MsgBox Position character close to opponent. The character will not be thrown back after the battle.
-	Sleep 10000
-}
+;Stand_Close_Message() ; Doesn't  work - CHECK ON THIS, I THINK IT DOES WORK
+;{
+;	MsgBox Position character close to opponent. The character will not be thrown back after the battle.
+;	Sleep 10000
+;}
 
 ; -----Other Functions------
-hotkeys() ; add Pause, Exit and Reload hotkeys to each script
-{
-^!p::Pause ; Ctrl + Alt + p
-^!e::ExitApp ; Ctrl + Alt + e
-^!r::Reload ; Ctrl + Alt + r
-}
-
-
-repeat_with_parameters(loops,key,sleeptime)
-{
-	Loop %loops% ; //Can be used to repeat a single hotkey as many times as necessary with proper sleeptime
-	{
-		ControlSend,, %key%, World of Warcraft
-		Sleep %sleeptime%
-	}
-}
+;
+;repeat_with_parameters(loops,key,sleeptime)
+;{
+;	Loop %loops% ; //Can be used to repeat a single hotkey as many times as necessary with proper sleeptime
+;	{
+;		ControlSend,, %key%, World of Warcraft
+;		Sleep %sleeptime%
+;	}
+;}
