@@ -1,10 +1,11 @@
 # AHK-Scripts
 Uses AutoHotkey to automatically level WoW Retail characters.
 
-Requirements:
+Requirements:  
 AutoHotkey  
 tdpetbattle add-on  
-Access to new Dalaran (Legion) or WoD Menagerie
+Access to new Dalaran (Legion) or WoD Menagerie  
+The pets listed in each profile or equivalent
 
 Setup:
 1. Set up your macros using the keyboard layouts in the Keyboard Layouts folder.
