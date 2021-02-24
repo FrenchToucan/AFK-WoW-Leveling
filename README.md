@@ -1,5 +1,5 @@
 # Auto Pet Battle Leveling
-Uses AutoHotkey to automatically level WoW Retail characters with pet battles.
+Uses AutoHotkey to automatically level WoW Retail characters with pet battles. Plus some other helpful scripts.
 
 Requirements  
 AutoHotkey  
