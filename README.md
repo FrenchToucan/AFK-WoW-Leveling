@@ -13,5 +13,5 @@ Setup:
 2. Configure tdpetbattle using the the battle scripts and pet line-ups commented at the bottom of each AHK file.  
 3. Run the script while standing within approach distance of the trainer (Dalaran) or right in front of Challenge Post with mouse cursor on it (Menagerie). WoW does not need to be the in focus window for script to run Dalaran battles and the user can do other things on the computer. For Menagerie battles, WoW will have to stay in focus and the computer can not be interacted with by the user.
 
-Coming Soon (I have been away from WoW for a long time but I will return!):
+Coming Soon (I have been away from WoW for a long time but I will return!):  
 More and better Menagerie scripts
