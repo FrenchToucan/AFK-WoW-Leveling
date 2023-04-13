@@ -34,7 +34,6 @@ change(#2)
 ability(Surge of Power:593) [enemy(#3).active]
 ability(Arcane Explosion:299)
 change(#3)
-ability(Arcane Storm:589)
-ability(Arcane Blast:421)
-standby
+ability(#3)
+ability(#1)
 */
