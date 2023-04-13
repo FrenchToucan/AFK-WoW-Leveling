@@ -1,4 +1,4 @@
-﻿#Include Functions.ahk
+﻿#Include C:\Users\Mike\Documents\GitHub\AHK-Pet-Battle-Leveling\Pet_Battles\Functions.ahk
 
 Loop
 {
@@ -10,9 +10,10 @@ Loop
 	
 	interact()
 	
-	gossip()
+	//gossip()
+	SendEvent, {Space}
 	
-	auto_pet_fight(21,7000)
+	auto_pet_fight(26,5000)
 	
 	revive_pets(100000)
 }
@@ -30,9 +31,9 @@ ability(Black Claw:919) [ !enemy.aura(Black Claw).exists & self(#1).active ]
 ability(Hunting Party:921)
 ability(Leap:364)
 change(#2)
-ability(Surge of Power:593)
-ability(Bite:110)
-change(#3) [self(#2).dead]
+ability(Surge of Power:593) [enemy(#3).active]
+ability(Arcane Explosion:299)
+change(#3)
 ability(Arcane Storm:589)
 ability(Arcane Blast:421)
 standby
