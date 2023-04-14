@@ -1,4 +1,4 @@
-﻿#Include %A_ScriptDir%/Functions.ahk
+#Include A_ScriptDir "/Functions.ahk"
 
 Loop
 {
@@ -22,7 +22,7 @@ Pets
 ---------------------
 Fishy 1 1 2
 Level (any?) <- level 1s always die right off the bat
-Chrominius * 1 2
+Chrominius * 1 2a
 
 tdBattlePetScript
 ---------------------
