@@ -13,7 +13,7 @@ Loop
 	//gossip()
 	SendEvent, {Space}
 	
-	auto_pet_fight(26,5000)
+	auto_pet_fight(31,4400)
 	
 	revive_pets(100000)
 }
