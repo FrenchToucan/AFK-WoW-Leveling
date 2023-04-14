@@ -1,4 +1,4 @@
-﻿#Include Functions.ahk
+﻿#Include %A_ScriptDir%/Functions.ahks
 
 Stand_Close_Message()
 

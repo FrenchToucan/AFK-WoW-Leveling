@@ -1,5 +1,4 @@
-﻿4Includes := %A_ScriptDir%
-#Include "%4Includes%\Functions.ahk
+﻿#Include %A_ScriptDir%/Functions.ahk
 
 Loop
 {

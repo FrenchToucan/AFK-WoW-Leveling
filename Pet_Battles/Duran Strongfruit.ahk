@@ -1,4 +1,4 @@
-﻿#Include C:\Users\Mike\Documents\GitHub\AHK-Pet-Battle-Leveling\Pet_Battles\Functions.ahk
+﻿#Include %A_ScriptDir%/Functions.ahk
 
 Loop
 {
