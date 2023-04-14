@@ -13,7 +13,7 @@ Requirements
 
 Set-up
 
-1.  Download Pet_Battles folder from this repository/
+1.  Download Pet_Battles folder from this repository.
 
 2.  Configure battle line-ups (battle pet and moves) using the commented pets and moves listed in each AHK file. Each file assumes you have three of each pet. If you don't, you will have to increase the time between battles by editing the AHK file for that battle (done by increase the number of milliseconds passed for the Revive_Pets function.
 
