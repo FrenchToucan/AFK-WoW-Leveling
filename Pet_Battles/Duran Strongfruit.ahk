@@ -2,11 +2,11 @@
 
 Loop
 {
-	target(2)
+	target(4)
 	
 	approach()
 	
-	target(3)
+	target(5)
 	
 	interact()
 	
