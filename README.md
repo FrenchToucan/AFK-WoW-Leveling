@@ -3,7 +3,7 @@ Using AutoHotkey + Pet Battles to AFK Level Toons in Retail WoW
 
 Requirements
 
--   [AutoHotkey 1.1](https://www.autohotkey.com/download/ahk-install.exe)
+-   [AutoHotkey 2.0](https://www.autohotkey.com/download/ahk-v2.exe)
 -   [tdpetbattle add-on](https://www.curseforge.com/wow/addons/pet-battle-scripts)
 -   [Rematch add-on](https://www.curseforge.com/wow/addons/rematch)
 -   [DialogueKey RF add-on](https://www.curseforge.com/wow/addons/dialogkey-df)
