@@ -120,7 +120,7 @@ gossip()
 {
 	Loop 1 ;	Select gossip option #1 (Let's Fight!)
 	{
-		ControlSend,, 0, World of Warcraft
+		ControlSend,, {Space}, World of Warcraft
 		Sleep 4000
 	}
 }

@@ -10,9 +10,8 @@ Loop
 	
 	interact()
 	
-	//gossip()
-	SendEvent, {Space}
-	
+	gossip()
+		
 	auto_pet_fight(22,5000)
 	
 	revive_pets(50000)
