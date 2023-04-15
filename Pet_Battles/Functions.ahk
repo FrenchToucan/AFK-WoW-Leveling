@@ -1,26 +1,25 @@
-﻿#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 #Warn  ; Enable warnings to assist with detecting common errors.
-SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
+SendMode("Input")  ; Recommended for new scripts due to its superior speed and reliability.
 
-;^!p::Pause ; Ctrl + Alt + p
-;^!e::ExitApp ; Ctrl + Alt + e
-;^!r::Reload ; Ctrl + Alt + r
+;^!p::Pause() ; Ctrl + Alt + p
+;^!e::ExitApp() ; Ctrl + Alt + e
+;^!r::Reload() ; Ctrl + Alt + r
 
 ; -----Pet Battle Functions-----
 challenge_pole_interact()
 {
-	CoordMode, Mouse, Screen
-	MouseMove, (A_ScreenWidth // 2), (A_ScreenHeight // 2)
-	ControlClick,, World of Warcraft,, RIGHT
-	sleep 500
+	CoordMode("Mouse", "Screen")
+	MouseMove((A_ScreenWidth // 2), (A_ScreenHeight // 2))
+	ControlClick(, "World of Warcraft", , "RIGHT")
+	Sleep(500)
 }
 
 reset_with_amalia()
 {
 	Loop 1 ;	Target Amalia (for a full pet reset)
 	{
-		ControlSend,, 2, World of Warcraft
-		Sleep 3000
+		ControlSend(2, , "World of Warcraft")
+		Sleep(3000)
 	}
 }
 
@@ -28,8 +27,8 @@ reset_with_sir_galveston()
 {
 	Loop 1 ;	Target Sir Galveston (for a full pet reset)
 	{
-		ControlSend,, 3, World of Warcraft
-    	Sleep 3000
+		ControlSend(3, , "World of Warcraft")
+    	Sleep(3000)
 	}
 }
 
@@ -37,8 +36,8 @@ reset_with_trixy()
 {
 	Loop 1 ;	Target Trixy (for a full pet reset when fighting Xorvasc)
 	{
-		ControlSend,, 2, World of Warcraft
-    	Sleep 3000
+		ControlSend(2, , "World of Warcraft")
+    	Sleep(3000)
 	}
 }
 
@@ -46,8 +45,8 @@ reset_with_baeloth()
 {
 	Loop 1 ;	Target Baeloth (for a full pet reset when fighting Robert Craig)
 	{
-		ControlSend,, 5, World of Warcraft
-    	Sleep 3000
+		ControlSend(5, , "World of Warcraft")
+    	Sleep(3000)
 	}
 }
 
@@ -55,8 +54,8 @@ reset_with_egcellent()
 {
 	Loop 1 ;	Target Egcellent (for a full pet reset when fighting Grixis Tinypop)
 	{
-		ControlSend,, 6, World of Warcraft
-    	Sleep 3000
+		ControlSend(6, , "World of Warcraft")
+    	Sleep(3000)
 	}
 }
 
@@ -64,10 +63,10 @@ approachPlus()
 {
 	Loop 1 ;	Approach target
 	{
-		ControlSend,, {w down}, World of Warcraft
-		Sleep 900
-		ControlSend,, {w up}, World of Warcraft
-		Sleep 1500
+		ControlSend("{w down}", , "World of Warcraft")
+		Sleep(900)
+		ControlSend("{w up}", , "World of Warcraft")
+		Sleep(1500)
 
 	}
 }
@@ -76,10 +75,10 @@ approach()
 {
 	Loop 1 ;	Approach target
 	{
-		ControlSend,, {w down}, World of Warcraft
-		Sleep 700
-		ControlSend,, {w up}, World of Warcraft
-		Sleep 1500
+		ControlSend("{w down}", , "World of Warcraft")
+		Sleep(700)
+		ControlSend("{w up}", , "World of Warcraft")
+		Sleep(1500)
 
 	}
 }
@@ -88,10 +87,10 @@ approach_xorvasc()
 {
 	Loop 1 ;	Approach Xorvasc - requires slightly longer approach than others
 	{
-		ControlSend,, {w down}, World of Warcraft
-		Sleep 850
-		ControlSend,, {w up}, World of Warcraft
-		Sleep 1500
+		ControlSend("{w down}", , "World of Warcraft")
+		Sleep(850)
+		ControlSend("{w up}", , "World of Warcraft")
+		Sleep(1500)
 
 	}
 
@@ -102,8 +101,8 @@ target(x)
 {
 	Loop 1 ;	Target x - where x is hotkey for targeting the desired opponent
 	{
-		ControlSend,, %x%, World of Warcraft
-		Sleep 1000
+		ControlSend(x, , "World of Warcraft")
+		Sleep(1000)
 	}
 }
 
@@ -111,8 +110,8 @@ interact()
 {
 	Loop 1 ; 	Interact with target
 	{
-		ControlSend,, g, World of Warcraft
-		Sleep 400
+		ControlSend("g", , "World of Warcraft")
+		Sleep(400)
 	}
 }
 
@@ -120,17 +119,17 @@ gossip()
 {
 	Loop 1 ;	Select gossip option #1 (Let's Fight!)
 	{
-		ControlSend,, {Space}, World of Warcraft
-		Sleep 4000
+		ControlSend("{Space}", , "World of Warcraft")
+		Sleep(4000)
 	}
 }
 
 auto_pet_fight(loops,sleeptime)
 {
-	Loop %loops% ; 	Press Auto button x number of times and rest for y between presses (tdbattlepetsscript required)
+	Loop loops ; 	Press Auto button x number of times and rest for y between presses (tdbattlepetsscript required)
 	{
-		ControlSend,, a, World of Warcraft
-		Sleep %sleeptime%
+		ControlSend("a", , "World of Warcraft")
+		Sleep(sleeptime)
 	}
 }
 
@@ -138,8 +137,8 @@ revive_pets(sleeptime)
 {
 	Loop 1 ; 	Revive Battle Pets after x milliseconds
 	{
-		Sleep %sleeptime%
-		ControlSend,, 9, World of Warcraft
+		Sleep(sleeptime)
+		ControlSend(9, , "World of Warcraft")
 	}
 }
 
