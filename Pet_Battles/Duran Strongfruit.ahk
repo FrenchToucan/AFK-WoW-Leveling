@@ -1,4 +1,4 @@
-#Include A_ScriptDir "/Functions.ahk"
+#Include Functions.ahk
 
 Loop
 {
