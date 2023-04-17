@@ -9,12 +9,14 @@ Loop
 	target(3)
 	
 	interact()
+
+	Sleep 1000
 	
 	gossip()
 	
 	auto_pet_fight(30,5000)
 	
-	revive_pets(100000)
+	revive_pets(15000)
 }
 
 /*
