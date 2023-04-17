@@ -1,29 +1,35 @@
+First Row
 1: Mount
-2: Target Amalia (/tar Amalia)
+2: Target Amalia (/tar Amalia) //used for her own battles and as a clear for Sir Galveson
 3: Target Sir Galveston (/tar Sir Galveston)
 4: Target Bodhi Sunwayver (/tar Bodhi Sunwayver)
 5: Target Tiffany Nelson (/tar Tiffany Nelson)
-6: Splint Jr ()
-7: Stitches Jr Jr ()
-8: Heliosus
+6: Splint Jr () (/tar Split Jr)
+7: Stitches Jr Jr () (/tar Stitches Jr Jr)
+8: Heliosus (/tar Heliosus)
 9: Revive Pets ()
 0: Gossip Option 1 ()
 
 Second Row
-2: Target Trixy (/tar Trixy) //only necessary to clear Xorvasc
+1:
+2: Target Trixy (/tar Trixy) //only necessary as a clear for Xorvasc
 3: Target Xorvasc (/tar Xorvasc)
 4: Tar Snot (/tar Snot) //only necessary to clear Odrogg
 5: Tar Odrog (/tar Odrog)
-6: Tar Menagerie Shopkeeper (/tar MK) //only necessary to clear Aulier
+6: Tar Menagerie Shopkeeper (/tar Menagerie Shopkeeper) //only necessary as a clear for clear Aulier
 7: Tar Aulier (/tar Aulier)
-
+8: 
 9: Revive Pets ()
 0: Gossip Option 1 ()
-6: Target Egcellent (/tar Egcellent)
-7: Target Grixis Tinypop
 
 Third Row
-2: Target Helpful Spirit (/tar Helpful Spirit) //only necessary to clear Nightwatcher Merayl
+1:
+2: Target Helpful Spirit (/tar Helpful Spirit) //only necessary as a clear for Nightwatcher Merayl
 3: Target Nightwatcher Merayl (/tar Nightwatcher Meryal)
-4: Target Roots (/tar Roots) //only necessary to clear for Durian Strongfruit
+4: Target Roots (/tar Roots) //only necessary as a clear for Durian Strongfruit
 5: Target Durian Strongfruit (/tar Durian Strongfruit)
+6: Target Egcellent (/tar Egcellent) //only necessary as a clear for Grixis Tinypop
+7: Target Grixis Tinypop (/tar Grixis Tinypop)
+8:
+9: Revive Pets ()
+0: Gossip Option 1 ()
