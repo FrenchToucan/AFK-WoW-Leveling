@@ -10,13 +10,13 @@ Loop
 	
 	interact()
 
-	Sleep 1000
+	Sleep 1000 ; Without a sleep, tries to choose the gossip option too quickly and just jumps instead (gossip is done via spacebar). Didn't see this with Grixis or Aulier. If it happens with others, move this to gossip() or interact() function.
 	
 	gossip()
 	
 	auto_pet_fight(30,5000)
 	
-	revive_pets(15000)
+	revive_pets(10000)
 }
 
 /*
