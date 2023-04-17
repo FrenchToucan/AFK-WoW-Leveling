@@ -10,7 +10,7 @@ Loop
 	
 	interact()
 
-	Sleep 1000 ; Without a sleep, tries to choose the gossip option too quickly and just jumps instead (gossip is done via spacebar). Didn't see this with Grixis or Aulier. If it happens with others, move this to gossip() or interact() function.
+	Sleep 1000 ; This encounter requires an extra long sleep after interact() or my character will just jump (gossip is done via spacebar).
 	
 	gossip()
 	
