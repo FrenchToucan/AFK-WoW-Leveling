@@ -10,7 +10,7 @@ Loop
 	
 	interact()
 
-	Sleep 1000 ; This encounter requires an extra long sleep after interact() or my character will just jump (gossip is done via spacebar).
+	Sleep 2000 ; This encounter requires an extra long sleep after interact() or my character will just jump (gossip is done via spacebar).
 	
 	gossip()
 	
