@@ -22,8 +22,8 @@ Loop
 /*
 Pets
 ---------------------
-Court Scribe 1 2 2
-Barnaby 1 1 2
+Crispin 1 1 2
+Ancona Chicken 212
 Leveling Pet (any level)
 
 tdBattlePetScript
