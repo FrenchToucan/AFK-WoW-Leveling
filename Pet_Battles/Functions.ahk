@@ -1,10 +1,6 @@
 #Warn  ; Enable warnings to assist with detecting common errors.
 SendMode("Input")  ; Recommended for new scripts due to its superior speed and reliability.
 
-;^!p::Pause() ; Ctrl + Alt + p
-;^!e::ExitApp() ; Ctrl + Alt + e
-;^!r::Reload() ; Ctrl + Alt + r
-
 ; -----Pet Battle Functions-----
 challenge_pole_interact()
 {
@@ -141,6 +137,13 @@ revive_pets(sleeptime)
 		ControlSend(9, , "World of Warcraft")
 	}
 }
+
+/*
+Hotkeys can't be included via a function
+	^!p::Pause() ; Ctrl + Alt + p
+	^!e::ExitApp() ; Ctrl + Alt + e
+	^!r::Reload() ; Ctrl + Alt + r
+*/ 
 
 ;Stand_Close_Message() ; Doesn't  work - CHECK ON THIS, I THINK IT DOES WORK
 ;{
