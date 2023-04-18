@@ -4,7 +4,7 @@ Loop
 {
 	target(4)
 	
-	approach()
+	approachPlus()
 	
 	target(5)
 	
