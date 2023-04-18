@@ -35,7 +35,7 @@ ability(Crouch:165) [ round = 1 ]
 ability(Burn:113) [ round > 2 & enemy(#1).active ]
 ability(Flamethrower:503)
 ability(Squawk:524)
-ability(Egg Barrage:642) [ enemy.aura(Shattered Defenses:542).exists ]
+ability(Slicing Wind:420) [ enemy.aura(Shattered Defenses:542).exists ]
 ability(Flock:581)
 standby
 */
