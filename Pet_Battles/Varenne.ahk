@@ -40,11 +40,11 @@ ability(Flock:581)
 standby
 
 use(Crouch:165)
-use(Burn:113) [ round > 2 & enemy(#1).active ]
+use(Burn:113) [ round > 1 & enemy(#1).active ]
 use(Flamethrower:503)
-use(Squawk:524) [ enemy.aura(Attack Reduction:494).exists ]
+use(Squawk:524) [ enemy.aura(Attack Reduction:494).!exists ]
 use(Flock:581)
-use(Predatory Strike:518)
+use(Predatory Strike:518) [ enemy(#3).active ]
 use(Slicing Wind:420)
 change(#2)
 change(#3)
