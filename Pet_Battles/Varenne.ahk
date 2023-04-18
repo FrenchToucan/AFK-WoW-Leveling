@@ -34,7 +34,6 @@ use(Flamethrower:503)
 use(Squawk:524) [ !enemy.aura(Attack Reduction:494).exists ]
 use(Flock:581)
 use(Predatory Strike:518) [ enemy(#3).active ]
-use(Wild Magic:592)
 use(Slicing Wind:420)
 change(#2)
 change(#3)
