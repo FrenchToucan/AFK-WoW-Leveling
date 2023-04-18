@@ -23,7 +23,7 @@ Loop
 Pets
 ---------------------
 Crispin 1 1 2
-Ancona Chicken 212
+Ancona Chicken 2 1 2
 Leveling Pet (any level)
 
 tdBattlePetScript
@@ -38,4 +38,14 @@ ability(Squawk:524)
 ability(Slicing Wind:420) [ enemy.aura(Shattered Defenses:542).exists ]
 ability(Flock:581)
 standby
+
+use(Crouch:165)
+use(Burn:113) [ round > 2 & enemy(#1).active ]
+use(Flamethrower:503)
+use(Squawk:524) [ enemy.aura(Attack Reduction:494).exists ]
+use(Flock:581)
+use(Predatory Strike:518)
+use(Slicing Wind:420)
+change(#2)
+change(#3)
 */
