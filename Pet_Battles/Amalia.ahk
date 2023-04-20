@@ -14,7 +14,7 @@ Loop
 	
 	auto_pet_fight(35,4000)
 	
-	revive_pets(1000)
+	revive_pets(1400)
 }
 
 /*
