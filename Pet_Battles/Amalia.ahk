@@ -12,9 +12,9 @@ Loop
 	
 	gossip()
 	
-	auto_pet_fight(100,1500)
+	auto_pet_fight(25,5000)
 	
-	revive_pets(88000)
+	revive_pets(30000)
 }
 
 /*
