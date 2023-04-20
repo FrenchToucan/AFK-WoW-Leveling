@@ -20,36 +20,33 @@ Loop
 /*
 Pets
 ---------------------
-Iron Starlette 1 1 X
-Leveling Pet (maybe lvl 5+?)
-Albino River Calf 2 1 1
+Iron Starlette 1 1 1
+Benax X X 2
+Leveling Pet
 
 tdBattlePetScript
 ---------------------
-standby [ self(#2).active & enemy.ability(#3).duration=6 ]
-change(#3) [ self(#2).played ]
-standby [ enemy.aura(Unattackable:1358).exists ]
-ability(Supercharge:208) [ self.aura(Howl:1725).exists ]
-ability(Supercharge:208) [ enemy(#2).active & enemy.hp>864 & round=8 ]
-ability(Wind-Up:459) [ enemy.hp>243 & round=9 ]
-ability(Powerball:566) [ enemy(#2).active & enemy.round!=1 ]
-ability(Powerball:566) [ enemy(#3).active & !self.aura(Wind-Up:458).exists ]
-ability(Wind-Up:459)
-change(#2) [ !self(#2).played ]
-ability(#3) [ enemy.ability(#2).usable ]
-ability(#2) [ enemy.aura(Stunned:927).exists ]
-ability(#1)
+quit [self(#3).dead]
+quit [self(#1).dead & !enemy(#2).dead]
 
-Removes switch put other pet gets dragged in anyways and then has to be switched out. 6c
-change(#3) [ self(#1).dead ]
-standby [ enemy.aura(1358).exists ]
-ability(208) [ self.aura(1725).exists ]
-ability(208) [ enemy(#2).active & enemy.hp>864 & round=8 ]
-ability(459) [ enemy.hp>243 & round=9 ]
-ability(566) [ enemy(#2).active & enemy.round!=1 ]
-ability(566) [ enemy(#3).active & !self.aura(458).exists ]
-ability(459)
-ability(#3) [ enemy.ability(#2).usable ]
-ability(#2) [ enemy.aura(927).exists ]
-ability(#1)
+if [enemy(#1).active]
+ability(Supercharge:208) [self.aura(Wind-Up:458).exists]
+ability(Wind-Up:459)
+endif
+
+if [enemy(#2).active]
+ability(Powerball:566) [enemy.round=1]
+change(#3) [!self(#3).played]
+change(#1) 
+ability(Wind-Up:459) [!self.aura(Wind-Up:458).exists]
+ability(Supercharge:208) [enemy.aura(Cute Face:904).duration=1]
+ability(Wind-Up:459) [!enemy.aura(Cute Face:904).exists]
+standby
+endif
+
+ability(Powerball:566) [enemy.round=1]
+change(#2) [enemy.aura(Puppies of the Flame:1355).duration=2]
+ability(Pump:297) [!self.aura(Pumped Up:296).exists]
+standby [enemy.aura(Puppies of the Flame:1355).exists]
+ability(Pump:297)
 */
