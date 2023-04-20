@@ -107,7 +107,7 @@ interact()
 	Loop 1 ; 	Interact with target
 	{
 		ControlSend("g", , "World of Warcraft")
-		Sleep(400)
+		Sleep(500)
 	}
 }
 

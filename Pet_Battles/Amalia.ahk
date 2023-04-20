@@ -12,15 +12,15 @@ Loop
 	
 	gossip()
 	
-	auto_pet_fight(25,5000)
+	auto_pet_fight(35,4000)
 	
-	revive_pets(30000)
+	revive_pets(1000)
 }
 
 /*
 Pets
 ---------------------
-Iron Starlette
+Iron Starlette 1 1 X
 Leveling Pet (maybe lvl 5+?)
 Albino River Calf 2 1 1
 
