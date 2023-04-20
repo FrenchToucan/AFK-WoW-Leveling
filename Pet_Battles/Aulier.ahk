@@ -42,7 +42,7 @@ ability(#3) [ enemy(#1).active & enemy.hpp > 50 ]
 ability(#1) [ enemy(#1).active ]
 ability(#2) [ enemy(#2).active & self.hpp < 70 ]
 change(#1) [ self(#3).dead & enemy(#2).active ]
-change(#2) [ enemy(#2).active & enemy.hp < 400 ]
+change(#2) [ enemy(#2).active & enemy.hpp < 400 ]
 ability(#1)
 endif
 if [ self(#3).dead ]
