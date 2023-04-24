@@ -1,59 +1,70 @@
-#Warn
-SetWorkingDir(A_ScriptDir)
+scriptFolder := /Pet_Battles
 
+; Create the GUI window
 myGui := Gui()
-myGui.Opt("+LastFound +AlwaysOnTop")
-myGui.Add("Text", , "Scripts in Pet_Battles folder:")
-ogcMyListView := myGui.Add("ListView", "r20 w400 vMyListView", ["Script Name", "Status"])
-ogcButtonStart := myGui.Add("Button", "x+20 y+10 w80", "Start")
-ogcButtonStart.OnEvent("Click", StartButton.Bind("Normal"))
-ogcButtonPause := myGui.Add("Button", "x+20 y+0 w80", "Pause")
-ogcButtonPause.OnEvent("Click", PauseButton.Bind("Normal"))
-ogcButtonClose := myGui.Add("Button", "x+20 y+0 w80", "Close")
-ogcButtonClose.OnEvent("Click", CloseButton.Bind("Normal"))
-myGui.Title := "Pet_Battles Scripts"
-myGui.Show("x100 y100")
+myGui.Add("Text", , "Select a script to run:")
+ogcScriptList := myGui.Add("ListBox", "vScriptList", [GetScriptList(scriptFolder)])
+ogcScriptList.OnEvent("DoubleClick", RunScript.Bind("DoubleClick"))
+ogcStartButton := myGui.Add("Button", "vStartButton", "Start")
+ogcStartButton.OnEvent("Click", StartScript.Bind("Normal"))
+ogcPauseButton := myGui.Add("Button", "vPauseButton", "Pause")
+ogcPauseButton.OnEvent("Click", PauseScript.Bind("Normal"))
+ogcCloseButton := myGui.Add("Button", "vCloseButton", "Close")
+ogcCloseButton.OnEvent("Click", CloseScript.Bind("Normal"))
+myGui.Show()
 
-Loop Files, A_ScriptDir "\Pet_Battles\*.ahk"
+; Define the function to get the list of scripts in the folder
+GetScriptList(folder) {
+fileList := ""
+Loop, Files, %folder%*.ahk
 {
-    filez := A_LoopFilePath
-    filename := SubStr(filez, (InStr(filez, "\")+1)<1 ? (InStr(filez, "\")+1)-1 : (InStr(filez, "\")+1), -4)
-    MyListView := ("", filename)
+; Add each script filename to the list, removing the path and extension
+file := SubStr(A_LoopFileName, 1, -4)
+fileList .= file "`n"
 }
-return
+return fileList
+}
 
-StartButton(A_GuiEvent, GuiCtrlObj, Info, *)
-{ ; V1toV2: Added bracket
-selected := MyListView.selection
-if (selected != "")
-{
-    script := MyListView.GetItem(selected, 1)
-    Run(A_ScriptDir "\Pet_Battles\" script ".ahk")
-    MyListView.SetItem(selected, 2, "Running")
+; Define the function to run the selected script
+RunScript() {
+Gui, Submit
+global scriptName := Gui.ScriptList
+global scriptPath := scriptFolder "" scriptName ".ahk"
 }
-return
-} ; V1toV2: Added Bracket before label
 
-PauseButton(A_GuiEvent, GuiCtrlObj, Info, *)
-{ ; V1toV2: Added bracket
-selected := MyListView.selection
-if (selected != "")
+; Define the function to start the selected script
+StartScript() {
+global scriptPath
+Process, Exist, %scriptPath%
+if (ErrorLevel)
 {
-    script := MyListView.GetItem(selected, 1)
-    WinClose(script ".ahk")
-    MyListView.SetItem(selected, 2, "Paused")
+MsgBox, The script is already running.
 }
-return
-} ; V1toV2: Added Bracket before label
+else
+{
+Run %scriptPath%
+}
+}
 
-CloseButton(A_GuiEvent, GuiCtrlObj, Info, *)
-{ ; V1toV2: Added bracket
-selected := MyListView.selection
-if (selected != "")
+; Define the function to pause the selected script
+PauseScript() {
+global scriptPath
+Process, Exist, %scriptPath%
+if (ErrorLevel)
 {
-    script := MyListView.GetItem(selected, 1)
-    WinClose(script ".ahk")
-    MyListView.Delete(selected)
+MsgBox, The script is not running.
 }
-return
-} ; V1toV2: Added bracket in the end
+else
+{
+Process, Pause, %scriptPath%
+}
+}
+
+; Define the function to close the selected script
+CloseScript() {
+global scriptPath
+Process, Exist, %scriptPath%
+if (ErrorLevel)
+{
+MsgBox, The script is not running.
+}
