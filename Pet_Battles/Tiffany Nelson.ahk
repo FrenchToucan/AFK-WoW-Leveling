@@ -12,29 +12,26 @@ Loop
 	
 	gossip()
 	
-	auto_pet_fight(45,7000)
+	auto_pet_fight(38,4000)
 	
-	revive_pets(120000)
+	revive_pets(4000)
 }
 
 /*
 Pets
 ---------------------
-Emerald Proto-Whelp 2 2 2
-Level Pet 12+
-Darkmoon Tonk 1 1 2
+Wretched Servant 2 2 2
+Iron Starlette * 1 2
+Leveling Pet
 
 tdBattlePetScript
 ---------------------
-change(#2) [self(#1).dead & !self(#2).played]
-change(#3) [self(#2).active]
-if [enemy(#3).active & self(#1).active]
-standby [enemy.hp <700]
-endif
-ability(Emerald Dream:598) [self(#1).hp < 900 & !enemy(#3).active]
-ability(Emerald Presence:597) [self(#1).aura(Emerald Presence:823).duration <=1 & !enemy(#3).active]
-ability(Emerald Bite:525)
-ability(Ion Cannon:209) [enemy(#3).hp > 659 & enemy.hp <1098]
-ability(Shock and Awe:646)
-ability(Missile:777)
+standby [enemy.hp<556 & enemy(#3).active & self(#1).active]
+ability(Explode:282) [enemy.hp.can_explode]
+ability(Consume Magic:1231) [round=2]
+ability(Consume Magic:1231) [enemy.ability(Cyclone:190).usable]
+ability(Weakness:471) [enemy.aura(Prowl:543).exists]
+ability(Powerball:566)
+ability(#1)
+change(next)
 */

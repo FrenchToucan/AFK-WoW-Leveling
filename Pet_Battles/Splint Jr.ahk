@@ -10,7 +10,7 @@ Loop
 	
 	auto_pet_fight(35,4000)
 	
-	revive_pets(40000)
+	revive_pets(18000) ; no repeatable
 }
 
 /*
@@ -48,4 +48,5 @@ No room for level pet with this arrangement.
 42xx character experience per battle.
 Character is not pushed back after battle. Approach code removed.
 No gossip dialogue. Gossip code removed.
+Update 4/28/23 - no repeatable so revive_pets() is now commented out
 */
