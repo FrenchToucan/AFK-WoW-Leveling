@@ -12,9 +12,9 @@ Loop
 	
 	gossip()
 	
-	auto_pet_fight(31,6000)
+	auto_pet_fight(34,6000)
 	
-	revive_pets(3000)
+	revive_pets(1000)
 }
 
 /*
@@ -42,8 +42,6 @@ ability(#3) [ enemy(#1).active & enemy.hpp > 50 ]
 ability(#1) [ enemy(#1).active ]
 ability(#2) [ enemy(#2).active & self.hpp < 70 ]
 change(#1) [ self(#3).dead & enemy(#2).active ]
-change(#2) [ enemy(#2).active & enemy.hpp < 400 ]
-ability(#1)
 endif
 if [ self(#3).dead ]
 change(#2)
