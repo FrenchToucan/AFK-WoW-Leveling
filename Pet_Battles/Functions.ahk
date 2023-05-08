@@ -85,8 +85,11 @@ gossip() ;	Select gossip option #1 (Let's Fight!)
 
 auto_pet_fight(loops,sleeptime) ; 	Press Auto button x number of times and rest for y between presses (tdbattlepetsscript required)
 {
+	Loop loops
+	{
 	ControlSend("a", , "World of Warcraft")
-	Sleep(sleeptime)
+	Sleep(sleeptime)	
+	}
 }
 
 revive_pets(sleeptime) ;	Revive Battle Pets via keybind after x milliseconds
