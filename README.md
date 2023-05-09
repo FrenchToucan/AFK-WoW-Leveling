@@ -1,4 +1,4 @@
-**Using AutoHotkey + Pet Battles to AFK Level Toons in Retail WoW**
+**Using AutoHotkey + Trainer Pet Battles to AFK Level Toons in Retail WoW**
 ================================================================
 
 **Requirements**

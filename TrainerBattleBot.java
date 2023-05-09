@@ -4,16 +4,16 @@ import java.awt.event.*;
 import java.io.*;
 import java.util.ArrayList;
 
-public class PetBattleBot extends JFrame {
+public class TrainerBattleBot extends JFrame {
     private JList<String> fileList;
     private JButton startButton, pauseButton, stopButton;
     private ArrayList<File> scriptFiles;
     private Process scriptProcess;
     private final String AUTOHOTKEY_PATH = "C:\\Program Files\\AutoHotkey\\v2\\AutoHotkey.exe";
 
-    public PetBattleBot() {
+    public TrainerBattleBot() {
         // set up the main frame
-        setTitle("Pet Battle Bot");
+        setTitle("Trainer Battle Bot");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(400, 300);
 
@@ -26,7 +26,7 @@ public class PetBattleBot extends JFrame {
 
         // create the file list
         scriptFiles = new ArrayList<>();
-        File scriptFolder = new File("./Pet_Battles");
+        File scriptFolder = new File("./Trainer Battles");
         addFilesToScriptList(scriptFolder);
         String[] fileListData = new String[scriptFiles.size()];
         for (int i = 0; i < scriptFiles.size(); i++) {
@@ -116,7 +116,7 @@ public class PetBattleBot extends JFrame {
     }
 
     public static void main(String[] args) {
-        PetBattleBot petBattleBot = new PetBattleBot();
-        petBattleBot.setVisible(true);
+        TrainerBattleBot trainerBattleBot = new TrainerBattleBot();
+        trainerBattleBot.setVisible(true);
     }
 }
