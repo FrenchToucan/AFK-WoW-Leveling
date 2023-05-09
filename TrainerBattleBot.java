@@ -2,7 +2,13 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class TrainerBattleBot extends JFrame {
     private JList<String> fileList;
@@ -10,6 +16,8 @@ public class TrainerBattleBot extends JFrame {
     private ArrayList<File> scriptFiles;
     private Process scriptProcess;
     private final String AUTOHOTKEY_PATH = "C:\\Program Files\\AutoHotkey\\v2\\AutoHotkey.exe";
+    private final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+    private Timer countdownTimer;
 
     public TrainerBattleBot() {
         // set up the main frame
@@ -78,45 +86,106 @@ public class TrainerBattleBot extends JFrame {
         buttonPanel.add(pauseButton);
         buttonPanel.add(stopButton);
         contentPane.add(buttonPanel, BorderLayout.SOUTH);
-    }
 
+        // create the countdown timer
+        countdownTimer = new Timer();
+        Date resetTime = getResetTime();
+        countdownTimer.scheduleAtFixedRate(new TimerTask() {
+            @Override
+            public void run() {
+                Date now = new Date();
+                if (now.after(resetTime)) {
+                    stopScript();
+                    JOptionPane.showMessageDialog(null, "Realm reset!");
+                    countdownTimer.cancel();
+                    countdownTimer.purge();
+                } else {
+                    long diff = resetTime.getTime() - now.getTime();
+                    long seconds = diff / 1000 % 60;
+                    long minutes                = diff / (60 * 1000) % 60;
+                    long hours = diff / (60 * 60 * 1000) % 24;
+                    String timeLeft = String.format("%02d:%02d:%02d", hours, minutes, seconds);
+                    setTitle("Trainer Battle Bot - " + timeLeft + " until realm reset");
+                }
+            }
+        }, 0, 1000);
+    
+        // schedule stopping the script at 11AM Eastern
+        Timer stopScriptTimer = new Timer();
+        stopScriptTimer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                stopScript();
+                JOptionPane.showMessageDialog(null, "Script stopped due to realm reset.");
+                System.exit(0);
+            }
+        }, getStopTime());
+    
+        setVisible(true);
+    }
+    
     private void addFilesToScriptList(File folder) {
-        for (File file : folder.listFiles()) {
-            if (file.isFile() && file.getName().endsWith(".ahk")) {
-                scriptFiles.add(file);
-            } else if (file.isDirectory()) {
+        File[] files = folder.listFiles();
+        for (File file : files) {
+            if (file.isDirectory()) {
                 addFilesToScriptList(file);
+            } else if (file.getName().endsWith(".ahk")) {
+                scriptFiles.add(file);
             }
         }
     }
-
+    
     private void startScript() {
-        int selectedIndex = fileList.getSelectedIndex();
-        if (selectedIndex >= 0) {
-            File scriptFile = scriptFiles.get(selectedIndex);
-            try {
-                String[] command = new String[] {AUTOHOTKEY_PATH, scriptFile.getAbsolutePath()};
-                scriptProcess = Runtime.getRuntime().exec(command);
-            } catch (IOException e) {
-                JOptionPane.showMessageDialog(this, "Error starting script: " + e.getMessage());
-            }
+        if (fileList.getSelectedIndex() == -1) {
+            JOptionPane.showMessageDialog(null, "Please select a script to run.");
+            return;
+        }
+        File scriptFile = scriptFiles.get(fileList.getSelectedIndex());
+        try {
+            scriptProcess = new ProcessBuilder(AUTOHOTKEY_PATH, scriptFile.getAbsolutePath()).start();
+            setTitle("Trainer Battle Bot - Running " + scriptFile.getName());
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
-
+    
     private void pauseScript() {
-        if (scriptProcess != null) {
-            scriptProcess.destroy();
+        if (scriptProcess == null) {
+            return;
         }
+        scriptProcess.destroy();
+        setTitle("Trainer Battle Bot - Paused");
     }
-
+    
     private void stopScript() {
-        if (scriptProcess != null) {
-            scriptProcess.destroy();
+        if (scriptProcess == null) {
+            return;
         }
+        scriptProcess.destroy();
+        scriptProcess = null;
+        setTitle("Trainer Battle Bot");
     }
-
+    
+    private Date getResetTime() {
+        LocalDateTime now = LocalDateTime.now(ZoneId.of("America/New_York"));
+        LocalDateTime resetTime = now.withHour(8).withMinute(0).withSecond(0);
+        if (now.compareTo(resetTime) >= 0) {
+            resetTime = resetTime.plusDays(1);
+        }
+        return Date.from(resetTime.atZone(ZoneId.of("America/New_York")).toInstant());
+    }
+    
+    private Date getStopTime() {
+        LocalDateTime now = LocalDateTime.now(ZoneId.of("America/New_York"));
+        LocalDateTime stopTime = now.withHour(11).withMinute(0).withSecond(0);
+        if (now.compareTo(stopTime) >= 0) {
+            stopTime = stopTime.plusDays(1);
+        }
+        return Date.from(stopTime.atZone(ZoneId.of("America/New_York")).toInstant());
+    }
+    
     public static void main(String[] args) {
-        TrainerBattleBot trainerBattleBot = new TrainerBattleBot();
-        trainerBattleBot.setVisible(true);
+        new TrainerBattleBot();
     }
 }
+    
