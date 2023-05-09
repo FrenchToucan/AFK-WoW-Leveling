@@ -4,16 +4,16 @@ import java.awt.event.*;
 import java.io.*;
 import java.util.ArrayList;
 
-public class PetBattleManager extends JFrame {
+public class PetBattleBot extends JFrame {
     private JList<String> fileList;
     private JButton startButton, pauseButton, stopButton;
     private ArrayList<File> scriptFiles;
     private Process scriptProcess;
     private final String AUTOHOTKEY_PATH = "C:\\Program Files\\AutoHotkey\\v2\\AutoHotkey.exe";
 
-    public PetBattleManager() {
+    public PetBattleBot() {
         // set up the main frame
-        setTitle("Pet Battle Manager");
+        setTitle("Pet Battle Bot");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(400, 300);
 
@@ -27,14 +27,10 @@ public class PetBattleManager extends JFrame {
         // create the file list
         scriptFiles = new ArrayList<>();
         File scriptFolder = new File("./Pet_Battles");
-        for (File file : scriptFolder.listFiles()) {
-            if (file.isFile() && file.getName().endsWith(".ahk")) {
-                scriptFiles.add(file);
-            }
-        }
+        addFilesToScriptList(scriptFolder);
         String[] fileListData = new String[scriptFiles.size()];
         for (int i = 0; i < scriptFiles.size(); i++) {
-            fileListData[i] = scriptFiles.get(i).getName().replace(".ahk", "");
+            fileListData[i] = scriptFiles.get(i).getAbsolutePath().replace(scriptFolder.getAbsolutePath() + File.separator, "");
         }
         fileList = new JList<>(fileListData);
         fileList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
@@ -84,6 +80,16 @@ public class PetBattleManager extends JFrame {
         contentPane.add(buttonPanel, BorderLayout.SOUTH);
     }
 
+    private void addFilesToScriptList(File folder) {
+        for (File file : folder.listFiles()) {
+            if (file.isFile() && file.getName().endsWith(".ahk")) {
+                scriptFiles.add(file);
+            } else if (file.isDirectory()) {
+                addFilesToScriptList(file);
+            }
+        }
+    }
+
     private void startScript() {
         int selectedIndex = fileList.getSelectedIndex();
         if (selectedIndex >= 0) {
@@ -110,12 +116,7 @@ public class PetBattleManager extends JFrame {
     }
 
     public static void main(String[] args) {
-        try {
-            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        PetBattleManager petBattleManager = new PetBattleManager();
-        petBattleManager.setVisible(true);
+        PetBattleBot petBattleBot = new PetBattleBot();
+        petBattleBot.setVisible(true);
     }
 }

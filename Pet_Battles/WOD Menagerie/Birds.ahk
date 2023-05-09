@@ -1,5 +1,4 @@
-﻿#Include Functions.ahk
-
+﻿#Include ..\Functions.ahk
 Loop
 {
 	target(6)

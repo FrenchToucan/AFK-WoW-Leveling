@@ -1,4 +1,4 @@
-﻿#Include Functions.ahks
+﻿#Include ..\Functions.ahk
 
 Stand_Close_Message()
 
