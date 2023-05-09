@@ -1,0 +1,21 @@
+name: Build Windows Executable
+on:
+  push:
+    branches: [dev-build]
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install dependencies
+        run: |
+          choco install -y autohotkey
+      - name: Build executable
+        run: |
+          cd AFK-WoW-Leveling
+          ahk2exe.exe /in AFK-WoW-Leveling.ahk /out AFK-WoW-Leveling.exe /icon AFK-WoW-Leveling.ico
+      - name: Upload artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: AFK-WoW-Leveling
+          path: AFK-WoW-Leveling/AFK-WoW-Leveling.exe
