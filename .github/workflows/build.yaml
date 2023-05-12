@@ -5,32 +5,27 @@ jobs:
   build:
     runs-on: windows-latest
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-    - name: Set up JDK 16
-      uses: actions/setup-java@v2
-      with:
-        java-version: 16
-        distribution: 'microsoft'
+      - name: Set up JDK 16
+        uses: actions/setup-java@v2
+        with:
+          java-version: 16
+          distribution: 'microsoft'
 
-    - name: Install AutoHotkey v2
-      run: |
-        mkdir c:\ahk
-        cd c:\ahk
-        Invoke-WebRequest -Uri "https://www.autohotkey.com/download/ahk-v2.zip" -OutFile "ahk.zip"
-        Expand-Archive -Path "ahk.zip" -DestinationPath "ahk"
+      - name: Install AutoHotkey v2
+        run: |
+          mkdir c:\ahk
+          cd c:\ahk
+          Invoke-WebRequest -Uri "https://www.autohotkey.com/download/ahk-v2.zip" -OutFile "ahk.zip"
+          Expand-Archive -Path "ahk.zip" -DestinationPath "ahk"
 
-    - name: Compile AHK scripts
-      run: |
-        cd ./AutoHotkeyScripts
-        C:\ahk\AutoHotkey.exe ahk2exe.ahk
+      - name: Compile AHK scripts
+        run: |
+          cd ./AutoHotkeyScripts
+          C:\ahk\AutoHotkey.exe ahk2exe.ahk
 
-    - name: Compile Java code
-      run: |
-        javac -cp ".;./lib/*" TrainerBattleBot.java
-
-    - name: Create Windows executable
-      run: |
-        cd ./AutoHotkeyScripts
-        C:\ahk\Compiler\Ahk2Exe.exe /in TrainerBattleBot.ahk /out TrainerBattleBot.exe /icon TrainerBattleBot.ico
+      - name: Compile Java code
+        run: |
+          javac -cp ".;./lib/*" TrainerBattleBot.java
