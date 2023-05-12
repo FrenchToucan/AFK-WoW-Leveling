@@ -1,4 +1,4 @@
-<project name="AFK-WoW-Leveling" default="jar" basedir=".">
+<project name="AFK-WoW-Leveling" default="zip" basedir=".">
     <property name="src.dir" value="." />
     <property name="build.dir" value="./build" />
     <property name="jar.dir" value="./jar" />
@@ -22,10 +22,10 @@
                 <attribute name="Main-Class" value="TrainerBattleBot" />
             </manifest>
         </jar>
-        <copy file="${jar.dir}/keybinds.txt" todir="${jar.dir}" />
-        <copy file="${jar.dir}/README.md" todir="${jar.dir}" />
-        <copy todir="${jar.dir}/Pet Battles">
-            <fileset dir="Pet Battles">
+        <copy file="${src.dir}/keybinds.txt" todir="${jar.dir}" />
+        <copy file="${src.dir}/README.md" todir="${jar.dir}" />
+        <copy todir="${jar.dir}/Trainer Battles">
+            <fileset dir="${src.dir}/Trainer Battles">
                 <include name="*.ahk"/>
             </fileset>
         </copy>
