@@ -21,8 +21,7 @@ Loop
 
 /*
 Pets
----------------------
-Unbonn Val'kyr 2 2 1
+Wicked Soul ? ? ? 
 Ikky 1 1 1
 Any Pet
 
