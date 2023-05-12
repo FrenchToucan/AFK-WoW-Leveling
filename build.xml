@@ -26,7 +26,7 @@
         <copy file="${jar.dir}/README.md" todir="${jar.dir}" />
         <copy todir="${jar.dir}/Pet Battles">
             <fileset dir="Pet Battles">
-                <exclude name="keybinds.ahk"/>
+                <exclude name="keybinds"/>
                 <exclude name="README.md"/>
                 <include name="*.ahk"/>
             </fileset>
