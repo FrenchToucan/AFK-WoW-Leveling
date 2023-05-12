@@ -31,7 +31,7 @@ jobs:
           path: jar/TrainerBattleBot.jar
           
       - name: Zip additional files
-        run: zip -r additional-files.zip Pet\ Battles/ keybinds.txt README.md
+        run: zip -r additional-files.zip Trainer\ Battles/ keybinds.txt README.md
           
       - name: Upload zip file
         uses: actions/upload-artifact@v2
