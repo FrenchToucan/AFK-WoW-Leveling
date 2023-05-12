@@ -1,9 +1,6 @@
-name: Build JAR File
+name: Build TrainerBattleBot
 
-on:
-  push:
-    branches:
-      - main
+on: push
 
 jobs:
   build:
@@ -11,22 +8,21 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-
-      - name: Setup JDK
+      
+      - name: Set up Java 16
         uses: actions/setup-java@v2
         with:
           java-version: 16
-
-      - name: Install Ant
-        run: |
-          sudo apt update
-          sudo apt install -y ant
-
-      - name: Build JAR
+          distribution: 'adopt'
+          
+      - name: Set up Ant
+        run: sudo apt-get install ant
+          
+      - name: Build
         run: ant jar
-
-      - name: Upload Artifact
+          
+      - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:
-          name: my-jar-file
-          path: ./dist/MyJarFile.jar
+          name: TrainerBattleBot.jar
+          path: jar/TrainerBattleBot.jar
