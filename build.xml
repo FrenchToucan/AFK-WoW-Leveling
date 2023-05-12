@@ -1,40 +1,40 @@
-<project name="TrainerBattleBot" basedir="." default="jar">
+<project name="AFK-WoW-Leveling" default="jar" basedir=".">
+    <property name="src.dir" value="." />
+    <property name="build.dir" value="./build" />
+    <property name="jar.dir" value="./jar" />
+    <property name="zip.dir" value="./zip" />
 
-  <!-- Define the property for the name of the generated jar file -->
-  <property name="jar.name" value="TrainerBattleBot"/>
+    <target name="clean">
+        <delete dir="${build.dir}" />
+        <delete dir="${jar.dir}" />
+        <delete dir="${zip.dir}" />
+    </target>
 
-  <!-- Define the source directories -->
-  <property name="src.dir" value="src"/>
-  <property name="resources.dir" value="resources"/>
+    <target name="compile">
+        <mkdir dir="${build.dir}" />
+        <javac srcdir="${src.dir}" destdir="${build.dir}" includeantruntime="false" />
+    </target>
 
-  <!-- Define the output directories -->
-  <property name="classes.dir" value="build/classes"/>
-  <property name="jar.dir" value="build/jar"/>
-  
-  <!-- Define the resources to include in the jar file -->
-  <fileset id="resources.fileset" dir="${resources.dir}">
-    <exclude name="**/*.java"/>
-  </fileset>
+    <target name="jar" depends="compile">
+        <mkdir dir="${jar.dir}" />
+        <jar destfile="${jar.dir}/TrainerBattleBot.jar" basedir="${build.dir}">
+            <manifest>
+                <attribute name="Main-Class" value="TrainerBattleBot" />
+            </manifest>
+        </jar>
+        <copy file="Pet Battles/keybinds.ahk" todir="${jar.dir}" />
+        <copy file="Pet Battles/README.md" todir="${jar.dir}" />
+        <copy todir="${jar.dir}/Pet Battles">
+            <fileset dir="Pet Battles">
+                <exclude name="keybinds.ahk"/>
+                <exclude name="README.md"/>
+                <include name="*.ahk"/>
+            </fileset>
+        </copy>
+    </target>
 
-  <!-- Compile the source code -->
-  <target name="compile" depends="clean">
-    <mkdir dir="${classes.dir}"/>
-    <javac srcdir="${src.dir}" destdir="${classes.dir}"/>
-  </target>
-
-  <!-- Create the jar file -->
-  <target name="jar" depends="compile">
-    <mkdir dir="${jar.dir}"/>
-    <jar destfile="${jar.dir}/${jar.name}.jar">
-      <fileset dir="${classes.dir}"/>
-      <fileset refid="resources.fileset"/>
-    </jar>
-  </target>
-
-  <!-- Clean the build directories -->
-  <target name="clean">
-    <delete dir="${classes.dir}"/>
-    <delete dir="${jar.dir}"/>
-  </target>
-
+    <target name="zip" depends="jar">
+        <mkdir dir="${zip.dir}" />
+        <zip destfile="${zip.dir}/AFK-WoW-Leveling.zip" basedir="${jar.dir}" />
+    </target>
 </project>
