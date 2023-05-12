@@ -1,5 +1,7 @@
 #Include %A_ScriptDir%\..\..\Functions.ahk
 
+; Don't use. Don't have a good way to force a clear and reload of pets.
+
 Loop
 {
 	reset_with_sir_galveston()
