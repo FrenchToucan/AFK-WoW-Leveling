@@ -1,0 +1,32 @@
+name: Build JAR File
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup JDK
+        uses: actions/setup-java@v2
+        with:
+          java-version: 16
+
+      - name: Install Ant
+        run: |
+          sudo apt update
+          sudo apt install -y ant
+
+      - name: Build JAR
+        run: ant jar
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: my-jar-file
+          path: ./dist/MyJarFile.jar
