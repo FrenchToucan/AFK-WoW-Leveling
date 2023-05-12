@@ -22,7 +22,7 @@
                 <attribute name="Main-Class" value="TrainerBattleBot" />
             </manifest>
         </jar>
-        <copy file="${jar.dir}/keybinds.ahk" todir="${jar.dir}" />
+        <copy file="${jar.dir}/keybinds" todir="${jar.dir}" />
         <copy file="${jar.dir}/README.md" todir="${jar.dir}" />
         <copy todir="${jar.dir}/Pet Battles">
             <fileset dir="Pet Battles">
