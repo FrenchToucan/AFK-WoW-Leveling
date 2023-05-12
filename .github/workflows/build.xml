@@ -1,0 +1,24 @@
+<project name="AFK-WoW-Leveling" default="jar" basedir=".">
+    <property name="src.dir" value="." />
+    <property name="build.dir" value="./build" />
+    <property name="jar.dir" value="./jar" />
+
+    <target name="clean">
+        <delete dir="${build.dir}" />
+        <delete dir="${jar.dir}" />
+    </target>
+
+    <target name="compile">
+        <mkdir dir="${build.dir}" />
+        <javac srcdir="${src.dir}" destdir="${build.dir}" includeantruntime="false" />
+    </target>
+
+    <target name="jar" depends="compile">
+        <mkdir dir="${jar.dir}" />
+        <jar destfile="${jar.dir}/TrainerBattleBot.jar" basedir="${build.dir}">
+            <manifest>
+                <attribute name="Main-Class" value="TrainerBattleBot" />
+            </manifest>
+        </jar>
+    </target>
+</project>
