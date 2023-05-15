@@ -12,7 +12,7 @@ Loop
 	
 	gossip()
 	
-	auto_pet_fight(40,6000)
+	auto_pet_fight(30,5000)
 	
 	revive_pets(10000)
 }
@@ -20,18 +20,22 @@ Loop
 /*
 Pets
 ---------------------
-Dust Bunny 2 2 1
-Snowshoe Rabbit 2 2 1
-Emerald Proto-Whelp 2 2 2
+Snowshoe Rabbit 1 2 2
+Corrupted Blood * 1 1
+Nexus Whelpling * 2 2
+*/
 
 tdBattlePetScript
 ---------------------
-use(Dodge:312) [enemy.aura(Undead:242).exists]
-use(Dodge:312) [round=1]
-use(Burrow:159) [round=4]
-use(Flurry:360)
-use(Emerald Presence:597) [!self.aura(Emerald Presence:823).exists]
-use(Emerald Dream:598)
-use(Emerald Bite:525)
-change(#2)
+change(#1) [enemy.aura(Elementium Bolt:605).duration=2]
+change(#3) [enemy.aura(Elementium Bolt:605).duration=1]
+change(#2) [self(#1).active & enemy(#2).hpp<100]
+ability(Stampede:163) [round=2]
+ability(Dodge:312)
+ability(Scratch:119)
+ability(Scorched Earth:172)
+ability(Elementium Bolt:606)
+ability(Arcane Storm:589)
+ability(Mana Surge:489)
+change(next)
 */
