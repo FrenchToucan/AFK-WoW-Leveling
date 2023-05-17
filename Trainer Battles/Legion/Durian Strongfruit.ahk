@@ -9,6 +9,8 @@ Loop
 	target(5)
 	
 	interact()
+
+	Sleep 1000
 	
 	gossip()
 		

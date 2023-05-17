@@ -23,7 +23,6 @@ Pets
 Snowshoe Rabbit 1 2 2
 Corrupted Blood * 1 1
 Nexus Whelpling * 2 2
-*/
 
 tdBattlePetScript
 ---------------------
