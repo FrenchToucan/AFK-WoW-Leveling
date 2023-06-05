@@ -2,7 +2,7 @@
 
 Loop
 {
-	target(6)
+	target(6) ; Targets Lil' Spirit Guide
 	
 	approach()
 	
