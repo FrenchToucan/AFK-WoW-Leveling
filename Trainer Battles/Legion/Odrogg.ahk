@@ -2,7 +2,7 @@
 
 Loop
 {
-	target(8)
+	target(4)
 
 	approachPlus()
 	

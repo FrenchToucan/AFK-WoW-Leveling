@@ -79,7 +79,7 @@ interact() ; 	Interact with target
 
 gossip() ;	Select gossip option #1 (Let's Fight!)
 {
-	ControlSend("{Space}", , "World of Warcraft")
+	ControlSend(1, , "World of Warcraft")
 	Sleep(4000)
 }
 
