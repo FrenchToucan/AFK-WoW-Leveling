@@ -2,7 +2,7 @@
 
 Loop
 {
-	target(4)
+	target(4) ; Target Vinyard Laborer for the reset45
 	
 	approachPlus()
 	
@@ -10,11 +10,11 @@ Loop
 	
 	interact()
 
-	Sleep 2000 ; This encounter requires an extra long sleep after interact() or my character will just jump (gossip is done via spacebar).
+	Sleep 2000 ; This encounter requires an extra long sleep after interact() or my character will just jump
 	
 	gossip()
 	
-	auto_pet_fight(32,5000)
+	auto_pet_fight(35,5000)
 	
 	revive_pets(500)
 }
