@@ -2,6 +2,9 @@
 
 Loop
 {
+	
+	stop_at_8AM_PT() ; Realm reset check	
+	
 	target(4) ; Target Vinyard Laborer for the reset45
 	
 	approachPlus()
