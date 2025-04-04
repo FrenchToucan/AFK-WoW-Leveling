@@ -2,6 +2,8 @@
 
 Loop
 {
+	stop_at_8AM_PT()
+
 	reset_with_amalia()
 	
 	approach()
@@ -12,7 +14,7 @@ Loop
 	
 	gossip()
 	
-	auto_pet_fight(45,4000)
+	auto_pet_fight(45,3800)
 	
 	revive_pets(1000)
 }

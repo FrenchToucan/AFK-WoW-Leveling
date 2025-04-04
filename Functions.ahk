@@ -3,18 +3,19 @@ SendMode("Input")  ; Recommended for new scripts due to its superior speed and r
 
 ; Function to stop the script at 8AM PT when the realm resets
 stop_at_8AM_PT() {
-        ; Get the current time in UTC
-        currentTimeUTC := FormatTime(A_Now, "HH:mm")
-        ; Convert UTC to Pacific Time (PT), considering daylight saving time (UTC-7)
-        currentTimePT := A_Now
-        currentTimePT -= 7, "Hours"
-        formattedTimePT := FormatTime(currentTimePT, "HH:mm")
+    ; Get the current time in UTC
+    currentTimeUTC := A_Now
+    ; Convert UTC to Pacific Time (PT), considering daylight saving time (UTC-7)
+    DateAdd(currentTimeUTC, -7, "Hours")
+    ; Extract the hours and minutes from the Pacific Time as integers
+    hourPT := SubStr(currentTimeUTC, 9, 2) + 0
+    minutePT := SubStr(currentTimeUTC, 11, 2) + 0
 
-        if (formattedTimePT >= "08:00" && formattedTimePT <= "08:07") {
-            ExitApp
+    ; Check if the time is between 08:00 and 08:07 PT
+    if (hourPT = 8 && minutePT >= 0 && minutePT <= 7) {
+        ExitApp()
     }
 }
-
 
 ; -----Pet Battle Functions-----
 challenge_pole_interact()
