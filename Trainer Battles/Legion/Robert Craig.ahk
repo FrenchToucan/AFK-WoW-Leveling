@@ -2,7 +2,9 @@
 
 Loop
 {
-	reset_with_baeloth()
+	stop_at_8AM_PT()	
+
+	reset_with_baeloth() ; hotkey 5
 	
 	approach()
 	
@@ -20,15 +22,15 @@ Loop
 /*
 Pets
 ---------------------
-Stormborne Whelpling 1 2 1
-Leveling Pet (any level)
+Stormborne Whelpling * 2 1
 Iron Starlette 1 2 x
+Leveling Pet (any level)
 
 tdBattlePetScript
 ---------------------
-change(#3) [self(#2).active]
 use(Arcane Storm:589)
-use(Mana Surge:489)
-use(Toxic Smoke:640) [enemy.hp<=390]
-use(Wind-Up:459)
-change(next)
+use(Wind-Up:459) [ enemy(#2).active & enemy.aura(Toxic Smoke:639).exists ]
+use(Explode:282) [ enemy(#3).hp<419 ]
+use(#2)
+change(#2)
+*/
