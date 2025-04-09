@@ -4,37 +4,29 @@ Stand_Close_Message()
 
 Loop
 {
-	reset_with_amalia()
+	reset_with_sir_galveston()
 	
 	target(8)
 	
 	interact()
 	
-	gossip()
+	auto_pet_fight(15,5000)
 	
-	auto_pet_fight(40,5000)
-	
-	revive_pets(120000)
+	revive_pets(86000)
 }
 
 /*
 Pets
 ---------------------
-Zandalari Anklerenderer 2 1 2
-Albino River Calf 2 1 1
-Zandalari Kneebiter 2 2 1
-
-This doesn't match with ped script below. Relaly do this with all Zandalaris and a longer script. Check Xu.
+Unborn Val'lyr * 2 1
+Ikky * 1 1
+Any Pet
 
 tdBattlePetScript
 ---------------------
-use(Black Claw:919) [!enemy.aura(Black Claw:918).exists]
-use(Hunting Party:921)
-use(Leap:364)
-change(#3)
-use(Black Claw:919) [!enemy.aura(Black Claw:918).exists]
-use(Hunting Party:921)
-use(Leap:364)
-change(#2) [ enemy(#1).dead & ! self(#3).dead ]
-ability(#1)
+ability(218)
+ability(652)
+change(#2) 
+ability(919) [self.round=1]
+ability(581)
 */

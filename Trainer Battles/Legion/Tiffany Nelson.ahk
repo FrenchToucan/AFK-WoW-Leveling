@@ -4,7 +4,7 @@ Loop
 {
 	stop_at_8AM_PT()
 
-	reset_with_amalia()
+	reset_with_amalia() ; 2
 	
 	approach()
 	

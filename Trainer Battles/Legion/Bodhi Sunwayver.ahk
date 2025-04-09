@@ -2,7 +2,7 @@
 
 Loop
 {
-	reset_with_sir_galveston()
+	reset_with_sir_galveston() ; 3
 	
 	approach()
 	

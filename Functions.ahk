@@ -121,11 +121,11 @@ Hotkeys can't be included via a function
 	^!r::Reload() ; Ctrl + Alt + r
 */ 
 
-;Stand_Close_Message() ; Doesn't  work - CHECK ON THIS, I THINK IT DOES WORK
-;{
-;	MsgBox Position character close to opponent. The character will not be thrown back after the battle.
-;	Sleep 10000
-;}
+Stand_Close_Message() ; Doesn't  work - CHECK ON THIS, I THINK IT DOES WORK
+{
+	MsgBox("Position character close to opponent. The character will not be thrown back after the battle.",,"OK")
+	Sleep 10000
+}
 
 ; -----Other Functions------
 ;
