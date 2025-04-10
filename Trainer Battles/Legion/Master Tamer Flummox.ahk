@@ -1,12 +1,10 @@
 #Include %A_ScriptDir%\..\..\Functions.ahk
 
-; Don't use. Don't have a good way to force a clear and reload of pets.
-
 Loop
 {
-	reset_with_sir_galveston()
+	target(3) ; clear with Felsoul Trickster
 	
-	approach()
+	approachPlus()
 	
 	target(2)
 	
@@ -14,14 +12,15 @@ Loop
 	
 	gossip()
 	
-	auto_pet_fight(35,4000)
+	auto_pet_fight(15,5000)
 	
-	revive_pets(16000)
+	revive_pets(86000)
 }
 
 /*
 Pets
-Wicked Soul ? ? ? 
+---------------------
+Unborn Val'kyr 2 2 1
 Ikky 1 1 1
 Any Pet
 
