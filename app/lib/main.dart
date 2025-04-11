@@ -98,17 +98,10 @@ class _ScriptManagerScreenState extends State<ScriptManagerScreen> {
     }
 
     try {
-      // Create a temporary AutoHotkey script to send the F12 key
-      final tempScript = File('${Directory.systemTemp.path}\\send_f12.ahk');
-      await tempScript.writeAsString('Send, {F12}');
-
-      // Execute the temporary script
+      // Directly execute the Send, {F12} command using AutoHotkey
       final autoHotkeyPath =
           'C:\\Program Files\\AutoHotkey\\v2\\AutoHotkey.exe';
-      await Process.run(autoHotkeyPath, [tempScript.path]);
-
-      // Delete the temporary script after execution
-      await tempScript.delete();
+      await Process.run(autoHotkeyPath, ['/k', 'Send, {F12}']);
 
       _showSnackBar('Pause command sent.');
     } catch (e) {
